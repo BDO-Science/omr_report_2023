@@ -1,0 +1,967 @@
+event,start,end,group,notes,category,color
+,2021-10-05,2021-10-12,"SWP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,"CVP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Smelt Larval Survey ,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,20mm Survey ,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,Spring Kodiak Trawl ,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,Fall Mid-water Trawl,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Summer Townet Survey,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,Bay Study ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,DJFMP- Seines ,Active with one disruption: not sampling San Joaquin Seines (due to low water),2,#FDE725FF
+,2021-10-05,2021-10-12, EDSM ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,EMP  ,?,1,#55C667FF
+,2021-10-05,2021-10-12,Mossdale  ,Currently active and no disruptions - may need to start sampling every other week due to low water,1,#55C667FF
+,2021-10-05,2021-10-12,USGS Flow monitoring ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Red Bluff Diversion Dam screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Knights Landing screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Tisdale screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,GCID screw trap,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Redd dewatering and stranding surveys ,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,Sacramento Carcass and Redd Surveys ,Not Active,4,#ffffff
+,2021-10-05,2021-10-12,Feather River screw trap ,Not Active (anticipate starting mid to late November 2021),4,#ffffff
+,2021-10-05,2021-10-12,SJRRP CDFW Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,SJRRP USFWS and USBR Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-05,2021-10-12,Stanislaus Fish Weir,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,"SWP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,"CVP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Smelt Larval Survey ,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,20mm Survey ,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,Spring Kodiak Trawl ,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,Fall Mid-water Trawl,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Summer Townet Survey,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,Bay Study ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,DJFMP- Seines ,Active with one disruption: not sampling San Joaquin Seines (due to low water),2,#FDE725FF
+,2021-10-12,2021-10-19, EDSM ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,EMP  ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Mossdale  ,Disruptions: no sampling this week,3,#453781FF
+,2021-10-12,2021-10-19,USGS Flow monitoring ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Red Bluff Diversion Dam screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Knights Landing screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Tisdale screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,GCID screw trap,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Redd dewatering and stranding surveys ,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,Sacramento Carcass and Redd Surveys ,Not Active,4,#ffffff
+,2021-10-12,2021-10-19,Feather River screw trap ,Not Active (anticipate starting mid to late November 2021),4,#ffffff
+,2021-10-12,2021-10-19,SJRRP CDFW Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,SJRRP USFWS and USBR Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,Stanislaus Fish Weir,Active (No disruptions),1,#55C667FF
+,2021-10-12,2021-10-19,"Stanislaus, Merced, Tuolumne Carcass Surveys",Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,"SWP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,"CVP regular counts, CWT reading, and larval sampling ",Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Smelt Larval Survey ,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,20mm Survey ,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,Spring Kodiak Trawl ,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,Fall Mid-water Trawl,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Summer Townet Survey,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,Bay Study ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,DJFMP- Seines ,Active with one disruption: not sampling San Joaquin Seines (due to low water),2,#FDE725FF
+,2021-10-19,2021-11-02, EDSM ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,EMP  ,?,1,#55C667FF
+,2021-10-19,2021-11-02,Mossdale  ,Not currently sampling (water is too low),3,#453781FF
+,2021-10-19,2021-11-02,USGS Flow monitoring ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Red Bluff Diversion Dam screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Knights Landing screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Tisdale screw trap ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,GCID screw trap,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Redd dewatering and stranding surveys ,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,Sacramento Carcass and Redd Surveys ,Not Active,4,#ffffff
+,2021-10-19,2021-11-02,Feather River screw trap ,Not Active (anticipate starting mid to late November 2021),4,#ffffff
+,2021-10-19,2021-11-02,SJRRP CDFW Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,SJRRP USFWS and USBR Field Monitoring  ,Active (No disruptions),1,#55C667FF
+,2021-10-19,2021-11-02,Stanislaus Fish Weir,Active (No disruptions),1,#55C667FF
+,2021-11-02,2021-11-09,"SWP regular counts, CWT reading, and larval sampling  ",Active (anticipating disruptions from 11/4-11/5) ,2,#FDE725FF
+,2021-11-02,2021-11-09,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-11-02,2021-11-09,20mm Survey  ,Not Active ,4,#ffffff
+,2021-11-02,2021-11-09,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-11-02,2021-11-09,Fall Mid-water Trawl ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-11-02,2021-11-09,Bay Study  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-11-02,2021-11-09, EDSM  ,Active (missed one day last week due to boat issues) ,1,#55C667FF
+,2021-11-02,2021-11-09,EMP   ,? ,1,#55C667FF
+,2021-11-02,2021-11-09,Mossdale   ,Interrupted last week (due to low water and vessel issues) should restart this week  ,2,#FDE725FF
+,2021-11-02,2021-11-09,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,Knights Landing screw trap  ,Active (from 10/25-10/27) ,1,#55C667FF
+,2021-11-02,2021-11-09,Tisdale screw trap  ,Active ,1,#55C667FF
+,2021-11-02,2021-11-09,GCID screw trap ,Active (interrupted 10/22-10/27),1,#55C667FF
+,2021-11-02,2021-11-09,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-11-02,2021-11-09,Sacramento Carcass and Redd Surveys  ,Active ,1,#55C667FF
+,2021-11-02,2021-11-09,Feather River screw trap  ,Not Active (anticipate starting mid to late November 2021) ,4,#ffffff
+,2021-11-02,2021-11-09,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,SJRRP USFWS and USBR Field Monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-02,2021-11-09,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,"SWP regular counts, CWT reading, and larval sampling  ",Active (no pumping from 11/4-11/5) ,1,#55C667FF
+,2021-11-09,2021-11-16,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-11-09,2021-11-16,20mm Survey  ,Not Active ,4,#ffffff
+,2021-11-09,2021-11-16,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-11-09,2021-11-16,Fall Mid-water Trawl ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-11-09,2021-11-16,Bay Study  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-11-09,2021-11-16, EDSM  ,Active  ,1,#55C667FF
+,2021-11-09,2021-11-16,EMP   ,? ,1,#55C667FF
+,2021-11-09,2021-11-16,Mossdale   ,Active,1,#55C667FF
+,2021-11-09,2021-11-16,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,Knights Landing screw trap  ,Active  ,1,#55C667FF
+,2021-11-09,2021-11-16,Tisdale screw trap  ,Active ,1,#55C667FF
+,2021-11-09,2021-11-16,GCID screw trap ,Active ,1,#55C667FF
+,2021-11-09,2021-11-16,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-11-09,2021-11-16,Sacramento Carcass and Redd Surveys  ,Active ,1,#55C667FF
+,2021-11-09,2021-11-16,Feather River screw trap  ,Not Active (anticipate starting mid to late November 2021) ,4,#ffffff
+,2021-11-09,2021-11-16,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-11-09,2021-11-16,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,"SWP regular counts, CWT reading, and larval sampling  ",Active (no pumping from 11/4-11/5) ,1,#55C667FF
+,2021-11-16,2021-11-23,"CVP regular counts, CWT reading, and larval sampling  ",Active (Disrupted 11/10) ,2,#FDE725FF
+,2021-11-16,2021-11-23,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-11-16,2021-11-23,20mm Survey  ,Not Active ,4,#ffffff
+,2021-11-16,2021-11-23,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-11-16,2021-11-23,Fall Mid-water Trawl ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-11-16,2021-11-23,Bay Study  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23, DJFMP- Chipps and Sacramento Trawls ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-11-16,2021-11-23, EDSM  ,Active  ,1,#55C667FF
+,2021-11-16,2021-11-23,EMP   ,Active,1,#55C667FF
+,2021-11-16,2021-11-23,Mossdale   ,Active,1,#55C667FF
+,2021-11-16,2021-11-23,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,Knights Landing screw trap  ,Active  ,1,#55C667FF
+,2021-11-16,2021-11-23,Tisdale screw trap  ,Active ,1,#55C667FF
+,2021-11-16,2021-11-23,GCID screw trap ,"Active (removed cone on 11/9, replaced on 11/12, malfunction on 11/14)",2,#FDE725FF
+,2021-11-16,2021-11-23,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-11-16,2021-11-23,Sacramento Carcass and Redd Surveys  ,Active ,1,#55C667FF
+,2021-11-16,2021-11-23,Feather River screw trap  ,Not Active (anticipate starting mid to late November 2021) ,4,#ffffff
+,2021-11-16,2021-11-23,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-11-16,2021-11-23,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-11-23,2021-11-30,20mm Survey  ,Not Active ,4,#ffffff
+,2021-11-23,2021-11-30,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-11-23,2021-11-30,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-11-23,2021-11-30,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30, DJFMP- Chipps and Sacramento Trawls ,Active (some disruptions due to fog) ,2,#FDE725FF
+,2021-11-23,2021-11-30,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-11-23,2021-11-30, EDSM  ,Active (some disruptions due to fog),2,#FDE725FF
+,2021-11-23,2021-11-30,EMP   , Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,Mossdale   ,Active (some disruptions due to low water and some fleet issues),2,#FDE725FF
+,2021-11-23,2021-11-30,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,Knights Landing screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,Tisdale screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,GCID screw trap ,Active ,1,#55C667FF
+,2021-11-23,2021-11-30,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-11-23,2021-11-30,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-11-23,2021-11-30,Feather River screw trap  ,"Active (upper rotary screw trap at Eye Riffle active from 11/15 to 11/19; lower rotary screw trap active next week, weekdays only) ",2,#FDE725FF
+,2021-11-23,2021-11-30,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-11-23,2021-11-30,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-11-30,2021-12-07,20mm Survey  ,Not Active ,4,#ffffff
+,2021-11-30,2021-12-07,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-11-30,2021-12-07,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-11-30,2021-12-07,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07, DJFMP- Chipps and Sacramento Trawls ,Active (some disruptions due to fog) ,2,#FDE725FF
+,2021-11-30,2021-12-07,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-11-30,2021-12-07, EDSM  ,Active (some disruptions due to fog),2,#FDE725FF
+,2021-11-30,2021-12-07,EMP   , Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,Mossdale   ,Not active this week ,4,#ffffff
+,2021-11-30,2021-12-07,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,Knights Landing screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,Tisdale screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,GCID screw trap ,Active ,1,#55C667FF
+,2021-11-30,2021-12-07,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-11-30,2021-12-07,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-11-30,2021-12-07,Feather River screw trap  ,Active (upper rotary screw trap at Eye Riffle active as of 11/15; lower rotary screw trap at Herringer Riffle active as of 11/29) ,1,#55C667FF
+,2021-11-30,2021-12-07,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-11-30,2021-12-07,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,Smelt Larval Survey  ,Not Active ,4,#ffffff
+,2021-12-07,2021-12-14,20mm Survey  ,Not Active ,4,#ffffff
+,2021-12-07,2021-12-14,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-12-07,2021-12-14,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-12-07,2021-12-14,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14, DJFMP- Chipps and Sacramento Trawls ,"Active (5x a week, some potential disruptions due to fog) ",2,#FDE725FF
+,2021-12-07,2021-12-14,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-12-07,2021-12-14, EDSM  ,Active (some disruptions due to fog),2,#FDE725FF
+,2021-12-07,2021-12-14,EMP   , Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,Mossdale   ,Active (some interruptions) ,2,#FDE725FF
+,2021-12-07,2021-12-14,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,Knights Landing screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,Tisdale screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,GCID screw trap ,Active ,1,#55C667FF
+,2021-12-07,2021-12-14,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-12-07,2021-12-14,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-12-07,2021-12-14,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2021-12-07,2021-12-14,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-12-07,2021-12-14,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,Smelt Larval Survey  ,Active (partial disruption),2,#FDE725FF
+,2021-12-14,2021-12-21,20mm Survey  ,Not Active ,4,#ffffff
+,2021-12-14,2021-12-21,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-12-14,2021-12-21,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-12-14,2021-12-21,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21, DJFMP- Chipps and Sacramento Trawls ,Active (5x a week) ,1,#55C667FF
+,2021-12-14,2021-12-21,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-12-14,2021-12-21, EDSM  ,Active (some disruptions due to fog and wind),2,#FDE725FF
+,2021-12-14,2021-12-21,EMP   , Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,Mossdale   ,Not active (due to low water and vessel availability),4,#ffffff
+,2021-12-14,2021-12-21,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,Knights Landing screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,Tisdale screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,GCID screw trap ,Active (partial disruptions – cone was removed 12/10 due to high water flows),2,#FDE725FF
+,2021-12-14,2021-12-21,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-12-14,2021-12-21,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-12-14,2021-12-21,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2021-12-14,2021-12-21,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-12-14,2021-12-21,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2021-12-21,2021-12-28,20mm Survey  ,Not Active ,4,#ffffff
+,2021-12-21,2021-12-28,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-12-21,2021-12-28,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-12-21,2021-12-28,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28, DJFMP- Chipps and Sacramento Trawls ,Active (5x a week) ,1,#55C667FF
+,2021-12-21,2021-12-28,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-12-21,2021-12-28, EDSM  ,Active ,1,#55C667FF
+,2021-12-21,2021-12-28,EMP   , Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,Mossdale   ,Not active (due to low water and vessel availability),4,#ffffff
+,2021-12-21,2021-12-28,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,Knights Landing screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,Tisdale screw trap  ,Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,GCID screw trap ,Active (partial disruptions – cone was removed 12/10 due to high water flows),2,#FDE725FF
+,2021-12-21,2021-12-28,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-12-21,2021-12-28,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-12-21,2021-12-28,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2021-12-21,2021-12-28,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-12-21,2021-12-28,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-28,2022-01-04,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2021-12-28,2022-01-04,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2021-12-28,2022-01-04,20mm Survey  ,Not Active ,4,#ffffff
+,2021-12-28,2022-01-04,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2021-12-28,2022-01-04,Fall Mid-water Trawl , Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,Summer Townet Survey ,Not Active ,4,#ffffff
+,2021-12-28,2022-01-04,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2021-12-28,2022-01-04, DJFMP- Chipps and Sacramento Trawls ,Active (5x a week) ,1,#55C667FF
+,2021-12-28,2022-01-04,DJFMP- Seines  ,Active with one disruption: not sampling San Joaquin Seines (due to low water) ,2,#FDE725FF
+,2021-12-28,2022-01-04, EDSM  ,Active ,1,#55C667FF
+,2021-12-28,2022-01-04,EMP   , Active (No disruptions),1,#55C667FF
+,2021-12-28,2022-01-04,Mossdale   ,Not active (due to low water and vessel availability),4,#ffffff
+,2021-12-28,2022-01-04,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,Knights Landing screw trap  ,"Active (Pulled cones on 12/24, didn’t sample on 12/25 or 12/26)",1,#55C667FF
+,2021-12-28,2022-01-04,Tisdale screw trap  ,"Active (Pulled cones on 12/24, didn’t sample on 12/25 or 12/26)",1,#55C667FF
+,2021-12-28,2022-01-04,GCID screw trap ,Active (partial disruptions – cone was removed 12/23 due to high water flows),2,#FDE725FF
+,2021-12-28,2022-01-04,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2021-12-28,2022-01-04,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2021-12-28,2022-01-04,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2021-12-28,2022-01-04,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2021-12-28,2022-01-04,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2022-01-04,2022-01-11,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-04,2022-01-11,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-04,2022-01-11,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-01-04,2022-01-11,20mm Survey  ,Not Active ,4,#ffffff
+,2022-01-04,2022-01-11,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2022-01-04,2022-01-11,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-01-04,2022-01-11,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-01-04,2022-01-11,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2022-01-04,2022-01-11, DJFMP- Chipps and Sacramento Trawls ,Active (No trawls on 12/30 due to Covid),2,#FDE725FF
+,2022-01-04,2022-01-11,DJFMP- Seines  ,Active: sampling San Joaquin Seines (Only two sites) ,2,#FDE725FF
+,2022-01-04,2022-01-11, EDSM  ,"Active (No sampling on 12/29 due to high winds, 12/30 due to Covid)",2,#FDE725FF
+,2022-01-04,2022-01-11,EMP   , Active (No disruptions),1,#55C667FF
+,2022-01-04,2022-01-11,Mossdale   ,Active ,1,#55C667FF
+,2022-01-04,2022-01-11,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-04,2022-01-11,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-04,2022-01-11,Knights Landing screw trap  ,"Active (Pulled cones on 12/24, didn’t sample on 12/25 or 12/26)",1,#55C667FF
+,2022-01-04,2022-01-11,Tisdale screw trap  ,"Active (Pulled cones on 12/24, didn’t sample on 12/25 or 12/26)",1,#55C667FF
+,2022-01-04,2022-01-11,GCID screw trap ,Active (partial disruptions – cone was removed 12/23 due to high water flows),2,#FDE725FF
+,2022-01-04,2022-01-11,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-01-04,2022-01-11,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2022-01-04,2022-01-11,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-01-04,2022-01-11,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2022-01-04,2022-01-11,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2022-01-04,2022-01-11,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2022-01-11,2022-01-18,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-11,2022-01-18,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-11,2022-01-18,Smelt Larval Survey  ,Interrupted ,3,#453781FF
+,2022-01-11,2022-01-18,LEPS,Interrupted ,3,#453781FF
+,2022-01-11,2022-01-18,20mm Survey  ,Not Active ,4,#ffffff
+,2022-01-11,2022-01-18,Spring Kodiak Trawl  ,Not Active ,4,#ffffff
+,2022-01-11,2022-01-18,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-01-11,2022-01-18,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-01-11,2022-01-18,Bay Study  ,Active (No disruptions),1,#55C667FF
+,2022-01-11,2022-01-18, DJFMP- Chipps and Sacramento Trawls ,"Active (Sampling on 1/6 was cut short. No Sac trawl on 1/9, will be made up on 1/12)",2,#FDE725FF
+,2022-01-11,2022-01-18,DJFMP- Seines  ,Active: sampling San Joaquin Seines (Only two sites.  South Delta sampling canceled 1/5) ,2,#FDE725FF
+,2022-01-11,2022-01-18, EDSM  ,Active (No sampling at Rio Vista on 1/6.  Sampling at Pittsburgh and Rio Vista canceled on 1/7),2,#FDE725FF
+,2022-01-11,2022-01-18,EMP   , Active (No disruptions),1,#55C667FF
+,2022-01-11,2022-01-18,Mossdale   ,Active (started Jan 1 w/ mixed CDFW/USFWS crews),1,#55C667FF
+,2022-01-11,2022-01-18,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-11,2022-01-18,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-11,2022-01-18,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-01-11,2022-01-18,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-01-11,2022-01-18,GCID screw trap ,Active (partial disruptions1/9),2,#FDE725FF
+,2022-01-11,2022-01-18,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-01-11,2022-01-18,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2022-01-11,2022-01-18,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-01-11,2022-01-18,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2022-01-11,2022-01-18,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2022-01-11,2022-01-18,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2022-01-18,2022-01-25,"SWP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-18,2022-01-25,"CVP regular counts, CWT reading, and larval sampling  ",Active (No disruptions),1,#55C667FF
+,2022-01-18,2022-01-25,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,LEPS,Active,1,#55C667FF
+,2022-01-18,2022-01-25,20mm Survey  ,Not Active ,4,#ffffff
+,2022-01-18,2022-01-25,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-01-18,2022-01-25,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-01-18,2022-01-25,Bay Study  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,DJFMP- Seines  ,Active: sampling San Joaquin Seines (only two sites)  ,2,#FDE725FF
+,2022-01-18,2022-01-25, EDSM  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,EMP   , Active (No disruptions),1,#55C667FF
+,2022-01-18,2022-01-25,Mossdale   ,Active (Disrupted 1/12),2,#FDE725FF
+,2022-01-18,2022-01-25,USGS Flow monitoring  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-18,2022-01-25,Red Bluff Diversion Dam screw trap  ,Active (No disruptions) ,1,#55C667FF
+,2022-01-18,2022-01-25,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,GCID screw trap ,Active ,1,#55C667FF
+,2022-01-18,2022-01-25,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-01-18,2022-01-25,Sacramento Carcass and Redd Surveys  ,Active (No disruptions),1,#55C667FF
+,2022-01-18,2022-01-25,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-01-18,2022-01-25,SJRRP CDFW Field Monitoring   ,Active (No disruptions) ,1,#55C667FF
+,2022-01-18,2022-01-25,SJRRP USFWS and USBR Field Monitoring,Active (No disruptions) ,1,#55C667FF
+,2022-01-18,2022-01-25,Stanislaus Fish Weir ,Active (No disruptions) ,1,#55C667FF
+,2022-01-25,2022-02-01,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-01-25,2022-02-01,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,LEPS,Active,1,#55C667FF
+,2022-01-25,2022-02-01,20mm Survey  ,Not Active ,4,#ffffff
+,2022-01-25,2022-02-01,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-01-25,2022-02-01,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-01-25,2022-02-01,Bay Study  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,DJFMP- Seines  ,Active: sampling San Joaquin Seines (only two sites)  ,2,#FDE725FF
+,2022-01-25,2022-02-01, EDSM  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,EMP   , Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Mossdale   ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-01-25,2022-02-01,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,GCID screw trap ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-01-25,2022-02-01,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-01-25,2022-02-01,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-01-25,2022-02-01,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-01-25,2022-02-01,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-01,2022-02-08,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,LEPS,Active,1,#55C667FF
+,2022-02-01,2022-02-08,20mm Survey  ,Not Active ,4,#ffffff
+,2022-02-01,2022-02-08,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-02-01,2022-02-08,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-02-01,2022-02-08,Bay Study  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,DJFMP- Seines  ,Active: sampling San Joaquin Seines (only two sites)  ,2,#FDE725FF
+,2022-02-01,2022-02-08, EDSM  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,EMP   , Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Mossdale   ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-02-01,2022-02-08,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,GCID screw trap ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-02-01,2022-02-08,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-02-01,2022-02-08,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-02-01,2022-02-08,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-02-01,2022-02-08,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-02-01,2022-02-08,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-08,2022-02-15,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,LEPS,Active,1,#55C667FF
+,2022-02-08,2022-02-15,20mm Survey  ,Not Active ,4,#ffffff
+,2022-02-08,2022-02-15,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-02-08,2022-02-15,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-02-08,2022-02-15,Bay Study  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,DJFMP- Seines  ,Active,1,#55C667FF
+,2022-02-08,2022-02-15, EDSM  ,"Active (no sampling in South Delta, Cache Slough/Liberty Island and Western Delta)",2,#FDE725FF
+,2022-02-08,2022-02-15,EMP   , Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Mossdale   ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-02-08,2022-02-15,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,GCID screw trap ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-02-08,2022-02-15,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-02-08,2022-02-15,Lower Sacramento Rotary Screw Trap,"Active (cones raised on 2/6, trapping resumed 2/7)",2,#FDE725FF
+,2022-02-08,2022-02-15,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-02-08,2022-02-15,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-02-08,2022-02-15,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-15,2022-02-22,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,LEPS,Active,1,#55C667FF
+,2022-02-15,2022-02-22,20mm Survey  ,Not Active ,4,#ffffff
+,2022-02-15,2022-02-22,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-02-15,2022-02-22,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-02-15,2022-02-22,Bay Study  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,DJFMP- Seines  ,Active,1,#55C667FF
+,2022-02-15,2022-02-22, EDSM  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,EMP   , Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Mossdale   ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-02-15,2022-02-22,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,GCID screw trap ,Active (not active since 2/7),2,#FDE725FF
+,2022-02-15,2022-02-22,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-02-15,2022-02-22,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-02-15,2022-02-22,Lower Sacramento Rotary Screw Trap,"Active (cones raised on 2/6, trapping resumed 2/7)",2,#FDE725FF
+,2022-02-15,2022-02-22,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-02-15,2022-02-22,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-02-15,2022-02-22,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-02-22,2022-03-01,"CVP regular counts, CWT reading, and larval sampling  ",Active (unplanned outage 2/17-18),1,#55C667FF
+,2022-02-22,2022-03-01,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,LEPS,Active,1,#55C667FF
+,2022-02-22,2022-03-01,20mm Survey  ,Not Active ,4,#ffffff
+,2022-02-22,2022-03-01,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-02-22,2022-03-01,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-02-22,2022-03-01,Bay Study  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,DJFMP- Seines  ,Active,1,#55C667FF
+,2022-02-22,2022-03-01, EDSM  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,EMP   , Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Mossdale   ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-02-22,2022-03-01,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,GCID screw trap ,Active (not active since 2/7),2,#FDE725FF
+,2022-02-22,2022-03-01,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-02-22,2022-03-01,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-02-22,2022-03-01,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-02-22,2022-03-01,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-02-22,2022-03-01,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-01,2022-03-08,"CVP regular counts, CWT reading, and larval sampling  ",Active (no pumping/salvage on 2/27 from 1800-2400),1,#55C667FF
+,2022-03-01,2022-03-08,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,LEPS,Active,1,#55C667FF
+,2022-03-01,2022-03-08,20mm Survey  ,Not Active ,4,#ffffff
+,2022-03-01,2022-03-08,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-03-01,2022-03-08,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-03-01,2022-03-08,Bay Study  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,DJFMP- Seines  ,Active (no San Joaquin and South Delta seine runs),2,#FDE725FF
+,2022-03-01,2022-03-08, EDSM  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,EMP   , Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Mossdale   ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-03-01,2022-03-08,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,GCID screw trap ,Active (re-started 2/25/22),1,#55C667FF
+,2022-03-01,2022-03-08,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-03-01,2022-03-08,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-03-01,2022-03-08,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-03-01,2022-03-08,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-03-01,2022-03-08,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-08,2022-03-15,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,LEPS,Active,1,#55C667FF
+,2022-03-08,2022-03-15,20mm Survey  ,Not Active ,4,#ffffff
+,2022-03-08,2022-03-15,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-03-08,2022-03-15,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-03-08,2022-03-15,Bay Study  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,DJFMP- Seines  ,Active (no East Bay and South Delta seine runs),2,#FDE725FF
+,2022-03-08,2022-03-15, EDSM  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,EMP   , Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Mossdale   ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-03-08,2022-03-15,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,GCID screw trap ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-03-08,2022-03-15,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-03-08,2022-03-15,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-03-08,2022-03-15,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-03-08,2022-03-15,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-15,2022-03-22,"CVP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,LEPS,Active,1,#55C667FF
+,2022-03-15,2022-03-22,20mm Survey  ,Not Active ,4,#ffffff
+,2022-03-15,2022-03-22,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-03-15,2022-03-22,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-03-15,2022-03-22,Bay Study  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22, DJFMP- Chipps and Sacramento Trawls ,Active ,2,#FDE725FF
+,2022-03-15,2022-03-22,DJFMP- Seines  ,Active (no   South Delta seine runs),2,#FDE725FF
+,2022-03-15,2022-03-22, EDSM  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,EMP   , Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Mossdale   ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-03-15,2022-03-22,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,GCID screw trap ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-03-15,2022-03-22,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-03-15,2022-03-22,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-03-15,2022-03-22,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-03-15,2022-03-22,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-22,2022-03-29,"CVP regular counts, CWT reading, and larval sampling  ", Partial Interruption on 3/23,2,#FDE725FF
+,2022-03-22,2022-03-29,Smelt Larval Survey  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,LEPS,Active,1,#55C667FF
+,2022-03-22,2022-03-29,20mm Survey  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-03-22,2022-03-29,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-03-22,2022-03-29,Bay Study  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,DJFMP- Seines  ,Active (no   South Delta seine runs),1,#55C667FF
+,2022-03-22,2022-03-29, EDSM  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,EMP   , Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Mossdale   ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-03-22,2022-03-29,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,GCID screw trap ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-03-22,2022-03-29,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-03-22,2022-03-29,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-03-22,2022-03-29,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-03-22,2022-03-29,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-03-29,2022-04-05,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-03-29,2022-04-05,Smelt Larval Survey  ,Active ,4,#ffffff
+,2022-03-29,2022-04-05,LEPS,Active,4,#ffffff
+,2022-03-29,2022-04-05,20mm Survey  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-03-29,2022-04-05,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-03-29,2022-04-05,Bay Study  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,DJFMP- Seines  ,Active (no South Delta seine runs),2,#FDE725FF
+,2022-03-29,2022-04-05, EDSM  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,EMP   , Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Mossdale   ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-03-29,2022-04-05,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,GCID screw trap ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-03-29,2022-04-05,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-03-29,2022-04-05,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-03-29,2022-04-05,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-03-29,2022-04-05,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-04-05,2022-04-12,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-04-05,2022-04-12,Smelt Larval Survey  ,Not Active,4,#ffffff
+,2022-04-05,2022-04-12,LEPS,Active,4,#ffffff
+,2022-04-05,2022-04-12,20mm Survey  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-04-05,2022-04-12,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-04-05,2022-04-12,Bay Study  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,DJFMP- Seines  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12, EDSM  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,EMP   , Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Mossdale   ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-04-05,2022-04-12,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,GCID screw trap ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-04-05,2022-04-12,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-04-05,2022-04-12,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-04-05,2022-04-12,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-04-05,2022-04-12,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,"SWP regular counts, CWT reading, and larval sampling  ",Active ,1,#55C667FF
+,2022-04-12,2022-04-19,"CVP regular counts, CWT reading, and larval sampling  ",Partial Interruption (Planned outages on 4/13 and 4/14),2,#FDE725FF
+,2022-04-12,2022-04-19,Smelt Larval Survey  ,Not Active,4,#ffffff
+,2022-04-12,2022-04-19,LEPS,Active,1,#55C667FF
+,2022-04-12,2022-04-19,20mm Survey  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Spring Kodiak Trawl  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Fall Mid-water Trawl , Not Active ,4,#ffffff
+,2022-04-12,2022-04-19,Summer Townet Survey ,Not Active ,4,#ffffff
+,2022-04-12,2022-04-19,Bay Study  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19, DJFMP- Chipps and Sacramento Trawls ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,DJFMP- Seines  ,Active (no sampling in South Delta from 4/3 -4/9),2,#FDE725FF
+,2022-04-12,2022-04-19, EDSM  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,EMP   , Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Mossdale   ,Not active ,4,#ffffff
+,2022-04-12,2022-04-19,USGS Flow monitoring  ,Active  ,1,#55C667FF
+,2022-04-12,2022-04-19,Red Bluff Diversion Dam screw trap  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Knights Landing screw trap  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Tisdale screw trap  ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,GCID screw trap ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Redd dewatering and stranding surveys  ,Not Active ,4,#ffffff
+,2022-04-12,2022-04-19,Sacramento Carcass and Redd Surveys  ,Active,1,#55C667FF
+,2022-04-12,2022-04-19,Lower Sacramento Rotary Screw Trap,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Feather River screw trap  ,Active (weekdays only) ,1,#55C667FF
+,2022-04-12,2022-04-19,SJRRP CDFW Field Monitoring   ,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,SJRRP USFWS and USBR Field Monitoring,Active ,1,#55C667FF
+,2022-04-12,2022-04-19,Stanislaus Fish Weir ,Active ,1,#55C667FF
+,2022-04-19,2022-04-26,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-04-19,2022-04-26,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-04-19,2022-04-26,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-04-19,2022-04-26,LEPS,Active,1,#55C667FF
+,2022-04-19,2022-04-26,20mm Survey,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Spring Kodiak Trawl,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-04-19,2022-04-26,Summer Townet Survey,Not Active,4,#ffffff
+,2022-04-19,2022-04-26,Bay Study,Active,1,#55C667FF
+,2022-04-19,2022-04-26,DJFMP- Chipps and Sacramento Trawls,Active,1,#55C667FF
+,2022-04-19,2022-04-26,DJFMP- Seines,Active,1,#55C667FF
+,2022-04-19,2022-04-26,EDSM,Active,1,#55C667FF
+,2022-04-19,2022-04-26,EMP,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Mossdale,Active,4,#ffffff
+,2022-04-19,2022-04-26,USGS Flow monitoring,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Knights Landing screw trap,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Tisdale screw trap,Active,1,#55C667FF
+,2022-04-19,2022-04-26,GCID screw trap,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-04-19,2022-04-26,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Feather River screw trap,Active (weekdays only),1,#55C667FF
+,2022-04-19,2022-04-26,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-04-19,2022-04-26,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-04-19,2022-04-26,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-04-26,2022-05-03,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-04-26,2022-05-03,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-04-26,2022-05-03,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-04-26,2022-05-03,LEPS,Active,1,#55C667FF
+,2022-04-26,2022-05-03,20mm Survey,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Spring Kodiak Trawl,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-04-26,2022-05-03,Summer Townet Survey,Not Active,4,#ffffff
+,2022-04-26,2022-05-03,Bay Study,Active,1,#55C667FF
+,2022-04-26,2022-05-03,DJFMP- Chipps and Sacramento Trawls,Active,1,#55C667FF
+,2022-04-26,2022-05-03,DJFMP- Seines,Active (no sampling in South Delta),2,#FDE725FF
+,2022-04-26,2022-05-03,EDSM,Active,1,#55C667FF
+,2022-04-26,2022-05-03,EMP,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Mossdale,Active,1,#55C667FF
+,2022-04-26,2022-05-03,USGS Flow monitoring,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Knights Landing screw trap,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Tisdale screw trap,Active,1,#55C667FF
+,2022-04-26,2022-05-03,GCID screw trap,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-04-26,2022-05-03,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Feather River screw trap,Active (weekdays only),1,#55C667FF
+,2022-04-26,2022-05-03,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-04-26,2022-05-03,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-04-26,2022-05-03,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-05-03,2022-05-10,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-05-03,2022-05-10,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-05-03,2022-05-10,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-05-03,2022-05-10,LEPS,Active,1,#55C667FF
+,2022-05-03,2022-05-10,20mm Survey,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Spring Kodiak Trawl,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-05-03,2022-05-10,Summer Townet Survey,Not Active,4,#ffffff
+,2022-05-03,2022-05-10,Bay Study,Active,1,#55C667FF
+,2022-05-03,2022-05-10,DJFMP- Chipps and Sacramento Trawls,Active,1,#55C667FF
+,2022-05-03,2022-05-10,DJFMP- Seines,Active,1,#55C667FF
+,2022-05-03,2022-05-10,EDSM,Active,1,#55C667FF
+,2022-05-03,2022-05-10,EMP,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Mossdale,Active,1,#55C667FF
+,2022-05-03,2022-05-10,USGS Flow monitoring,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Knights Landing screw trap,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Tisdale screw trap,Active,1,#55C667FF
+,2022-05-03,2022-05-10,GCID screw trap,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-05-03,2022-05-10,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Feather River screw trap,Active (weekdays only),1,#55C667FF
+,2022-05-03,2022-05-10,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-05-03,2022-05-10,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-05-03,2022-05-10,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-05-10,2022-05-17,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-05-10,2022-05-17,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-05-10,2022-05-17,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-05-10,2022-05-17,LEPS,Active,1,#55C667FF
+,2022-05-10,2022-05-17,20mm Survey,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Spring Kodiak Trawl,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-05-10,2022-05-17,Summer Townet Survey,Not Active,4,#ffffff
+,2022-05-10,2022-05-17,Bay Study,Active,1,#55C667FF
+,2022-05-10,2022-05-17,DJFMP- Chipps and Sacramento Trawls,Active,1,#55C667FF
+,2022-05-10,2022-05-17,DJFMP- Seines,Active,1,#55C667FF
+,2022-05-10,2022-05-17,EDSM,Active,1,#55C667FF
+,2022-05-10,2022-05-17,EMP,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Mossdale,Active,1,#55C667FF
+,2022-05-10,2022-05-17,USGS Flow monitoring,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Knights Landing screw trap,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Tisdale screw trap,Active,1,#55C667FF
+,2022-05-10,2022-05-17,GCID screw trap,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-05-10,2022-05-17,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Feather River screw trap,Active (weekdays only),1,#55C667FF
+,2022-05-10,2022-05-17,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-05-10,2022-05-17,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-05-10,2022-05-17,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-05-17,2022-05-24,"SWP regular counts, CWT reading, and larval sampling",Not Active 5/16/22 - 5/20/22,2,#FDE725FF
+,2022-05-17,2022-05-24,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-05-17,2022-05-24,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-05-17,2022-05-24,LEPS,Active,1,#55C667FF
+,2022-05-17,2022-05-24,20mm Survey,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-05-17,2022-05-24,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-05-17,2022-05-24,Summer Townet Survey,Not Active,4,#ffffff
+,2022-05-17,2022-05-24,Bay Study,Active,1,#55C667FF
+,2022-05-17,2022-05-24,DJFMP- Chipps and Sacramento Trawls,Active ,1,#55C667FF
+,2022-05-17,2022-05-24,DJFMP- Seines,Active ,1,#55C667FF
+,2022-05-17,2022-05-24,EDSM,Active ,1,#55C667FF
+,2022-05-17,2022-05-24,EMP,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Mossdale,Active,4,#ffffff
+,2022-05-17,2022-05-24,USGS Flow monitoring,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Knights Landing screw trap,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Tisdale screw trap,Active (data through 5/13/2022 as of 5/17/2022 meeting),1,#55C667FF
+,2022-05-17,2022-05-24,GCID screw trap,Partial Interruption,2,#FDE725FF
+,2022-05-17,2022-05-24,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-05-17,2022-05-24,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Feather River screw trap,Active (weekdays only),1,#55C667FF
+,2022-05-17,2022-05-24,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-05-17,2022-05-24,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-05-17,2022-05-24,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-05-24,2022-05-31,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-05-24,2022-05-31,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-05-24,2022-05-31,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-05-24,2022-05-31,20mm Survey,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,Summer Townet Survey,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,Bay Study,Active,1,#55C667FF
+,2022-05-24,2022-05-31,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-05-24,2022-05-31,DJFMP- Seines,Partial Interruption (not able to sample in San Joaquin and South Delta),2,#FDE725FF
+,2022-05-24,2022-05-31,EDSM,Active ,1,#55C667FF
+,2022-05-24,2022-05-31,EMP,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Mossdale,Interrupted,3,#453781FF
+,2022-05-24,2022-05-31,USGS Flow monitoring,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,Tisdale screw trap,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,GCID screw trap,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-05-24,2022-05-31,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Lower Sacramento Rotary Screw Trap,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Feather River (upper DWR),Active,1,#55C667FF
+,2022-05-24,2022-05-31,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-05-24,2022-05-31,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-05-24,2022-05-31,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-05-24,2022-05-31,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-05-31,2022-06-07,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-05-31,2022-06-07,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-05-31,2022-06-07,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-05-31,2022-06-07,20mm Survey,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,Summer Townet Survey,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,Bay Study,Active,1,#55C667FF
+,2022-05-31,2022-06-07,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-05-31,2022-06-07,DJFMP- Seines,Partial Interruption (not able to sample in South Delta),2,#FDE725FF
+,2022-05-31,2022-06-07,EDSM,Active ,1,#55C667FF
+,2022-05-31,2022-06-07,EMP,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Mossdale,Active,1,#55C667FF
+,2022-05-31,2022-06-07,USGS Flow monitoring,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,Tisdale screw trap,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,GCID screw trap,Partial interruption (traps were removed from 5/24-5/26),2,#FDE725FF
+,2022-05-31,2022-06-07,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-05-31,2022-06-07,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Lower Sacramento Rotary Screw Trap,Partial interruption (pulled from 5/26 through 5/28),2,#FDE725FF
+,2022-05-31,2022-06-07,Feather River (upper DWR),"Partial interruption (Herringer is interrupted, trapping continues at Eye side channel)",2,#FDE725FF
+,2022-05-31,2022-06-07,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-05-31,2022-06-07,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-05-31,2022-06-07,SJRRP USFWS and USBR Field Monitoring,Active,1,#55C667FF
+,2022-05-31,2022-06-07,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-06-07,2022-06-14,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-06-07,2022-06-14,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-06-07,2022-06-14,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-06-07,2022-06-14,20mm Survey,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,Summer Townet Survey,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Bay Study,Active,1,#55C667FF
+,2022-06-07,2022-06-14,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-06-07,2022-06-14,DJFMP- Seines,Active,1,#55C667FF
+,2022-06-07,2022-06-14,EDSM,Partial Interruption (no sites were sampled at Suisun Marsh and Lower San Joaquin,2,#FDE725FF
+,2022-06-07,2022-06-14,EMP,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Mossdale,Active,1,#55C667FF
+,2022-06-07,2022-06-14,USGS Flow monitoring,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,Tisdale screw trap,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,GCID screw trap,Active (Trap was inactive on n 6/03),1,#55C667FF
+,2022-06-07,2022-06-14,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-06-07,2022-06-14,Lower Sacramento Rotary Screw Trap,Partial interruption (pulled from 6/02 through 6/04),2,#FDE725FF
+,2022-06-07,2022-06-14,Feather River (upper DWR),"Partial interruption (Herringer is interrupted,  trapping continues at Eye side channel with missing data from 6/03-6/04 and 6/06)",2,#FDE725FF
+,2022-06-07,2022-06-14,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-06-07,2022-06-14,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-06-07,2022-06-14,SJRRP USFWS and USBR Field Monitoring,Not Active,4,#ffffff
+,2022-06-07,2022-06-14,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-06-14,2022-06-21,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-06-14,2022-06-21,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-06-14,2022-06-21,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-06-14,2022-06-21,20mm Survey,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Summer Townet Survey,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Bay Study,Active,1,#55C667FF
+,2022-06-14,2022-06-21,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-06-14,2022-06-21,DJFMP- Seines,Active,1,#55C667FF
+,2022-06-14,2022-06-21,EDSM,Active,1,#55C667FF
+,2022-06-14,2022-06-21,EMP,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Mossdale,Active,1,#55C667FF
+,2022-06-14,2022-06-21,USGS Flow monitoring,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Tisdale screw trap,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,GCID screw trap,Active (Trap was inactive on n 6/08-6/10),1,#55C667FF
+,2022-06-14,2022-06-21,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-06-14,2022-06-21,Lower Sacramento Rotary Screw Trap,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Feather River (upper DWR),"Partial interruption (Herringer is interrupted, trapping continues at Eye side channel with missing data from 6/03-6/04 and 6/06)",2,#FDE725FF
+,2022-06-14,2022-06-21,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-06-14,2022-06-21,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-06-14,2022-06-21,SJRRP USFWS and USBR Field Monitoring,Not Active,4,#ffffff
+,2022-06-14,2022-06-21,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-06-21,2022-06-28,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-06-21,2022-06-28,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-06-21,2022-06-28,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-06-21,2022-06-28,20mm Survey,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Summer Townet Survey,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Bay Study,Active,1,#55C667FF
+,2022-06-21,2022-06-28,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-06-21,2022-06-28,DJFMP- Seines,Active,1,#55C667FF
+,2022-06-21,2022-06-28,EDSM,Active,1,#55C667FF
+,2022-06-21,2022-06-28,EMP,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Mossdale,Active,1,#55C667FF
+,2022-06-21,2022-06-28,USGS Flow monitoring,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Tisdale screw trap,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,GCID screw trap,Active (Trap was inactive on n 6/08-6/10),1,#55C667FF
+,2022-06-21,2022-06-28,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-06-21,2022-06-28,Lower Sacramento Rotary Screw Trap,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Feather River (upper DWR),"Partial interruption (Herringer is interrupted, trapping continues at Eye side channel.",2,#FDE725FF
+,2022-06-21,2022-06-28,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-06-21,2022-06-28,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-06-21,2022-06-28,SJRRP USFWS and USBR Field Monitoring,Not Active,4,#ffffff
+,2022-06-21,2022-06-28,Stanislaus Fish Weir,Active,1,#55C667FF
+,2022-06-28,2022-07-05,"SWP regular counts, CWT reading, and larval sampling",Active,1,#55C667FF
+,2022-06-28,2022-07-05,"CVP regular counts, CWT reading, and larval sampling  ",Active,1,#55C667FF
+,2022-06-28,2022-07-05,Smelt Larval Survey,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,LEPS,Not Active (ended May 12),4,#ffffff
+,2022-06-28,2022-07-05,20mm Survey,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Spring Kodiak Trawl,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Fall Mid-water Trawl,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Summer Townet Survey,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Bay Study,Active,1,#55C667FF
+,2022-06-28,2022-07-05,DJFMP- Chipps and Sacramento Trawls,Active (sampling three days/week through Dec),1,#55C667FF
+,2022-06-28,2022-07-05,DJFMP- Seines,Active,1,#55C667FF
+,2022-06-28,2022-07-05,EDSM,Active,1,#55C667FF
+,2022-06-28,2022-07-05,EMP,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Mossdale,Active,1,#55C667FF
+,2022-06-28,2022-07-05,USGS Flow monitoring,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Red Bluff Diversion Dam screw trap,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Knights Landing screw trap,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Tisdale screw trap,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,GCID screw trap,Active (Trap was inactive on n 6/08-6/10),1,#55C667FF
+,2022-06-28,2022-07-05,Redd dewatering and stranding surveys,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Sacramento Carcass and Redd Surveys,Active,1,#55C667FF
+,2022-06-28,2022-07-05,Lower Sacramento Rotary Screw Trap,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Feather River (upper DWR),"Partial interruption (Herringer is interrupted, trapping continues at Eye side channel.",2,#FDE725FF
+,2022-06-28,2022-07-05,Feather River (lower CDFW),Active,1,#55C667FF
+,2022-06-28,2022-07-05,SJRRP CDFW Field Monitoring,Active,1,#55C667FF
+,2022-06-28,2022-07-05,SJRRP USFWS and USBR Field Monitoring,Not Active,4,#ffffff
+,2022-06-28,2022-07-05,Stanislaus Fish Weir,Active,1,#55C667FF
