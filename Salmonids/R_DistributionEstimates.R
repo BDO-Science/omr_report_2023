@@ -218,60 +218,89 @@ plot_distest_SH
 dev.off()
 
 ###################################################################
-df <- data.frame(x = c(NA, "x.y", "x.z", "y.z"))
-str(df)
-df %>% separate(x, c("A", "B"))
 
-at <- seq(from = min(distribution_data$Date), to = max(distribution_data$Date), by = "month")
+#Load hatchery winter-run acoustic dataset
+acoustic_data_raw <- read.csv(file.path("data","HatcheryWR_acoustic_data.csv")) %>%
+  mutate(Date=as.Date(Date,"%m/%d/%Y"))
+str(acoustic_data_raw)
 
-#Natural winter-run
-tiff(filename="Fig_NaturalWinter_DistributionEstimates.tiff",width=10,height = 8, units = "in",  res=300, compression ="lzw")
+acoustic_data <- acoustic_data_raw %>% select(Date,MeridianBr,TowerBridge, Benicia_east) %>%
+  mutate(MeridianBr = replace_na(MeridianBr, 0),TowerBridge=replace_na(TowerBridge, 0),Benicia_east=replace_na(Benicia_east, 0)) %>%
+  mutate(MeridianBr=cumsum(MeridianBr),TowerBridge=cumsum(TowerBridge),Benicia_east=cumsum(Benicia_east)) %>%
+  mutate(MeridianBr=MeridianBr/max(MeridianBr),TowerBridge=TowerBridge/max(TowerBridge),Benicia_east=Benicia_east/max(Benicia_east)) %>%
+  mutate(Reverse_MeridianBr = 1-MeridianBr, TowerBridge_minus_Benicia=TowerBridge-Benicia_east) %>%
+  select(Date,Reverse_MeridianBr,TowerBridge_minus_Benicia,Benicia_east) %>%
+  gather("Category","Percent",2:4) %>% mutate(Date=as.Date(Date))%>%
+  mutate(Percent=Percent*100)
 
-plot(Natural_WR_YTE ~ Date, distribution_data, xaxt = "n", type = "l", col="black",main="Natural Winter-Run",ylab="Percentage of Population",xlab="")
-lines(distribution_data$Date, distribution_data$Natural_WR_ID, col = "black", type = "l", lty = 2)
-lines(distribution_data$Date, distribution_data$Natural_WR_E, col = "black", type = "l", lty = 3)
-axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
-legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
-       col=c("black", "black",'black'), lty=1:3, cex=0.8)
+#Hatchery winter-run acoustic tag data analog to dist estimates
+plot_monitoring_WR_hat <- ggplot() +  
+  geom_line(data=acoustic_data, aes(Date, Percent, colour=Category),size=1) +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  ggtitle("(B)")+
+  theme(plot.title=element_text(size=13), 
+        axis.text.x=element_text(size=9, color="black"), 
+        axis.text.y = element_text(size=8, color="black"), 
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 9, angle = 90),
+        strip.text = element_text(size = 7),
+        legend.position = "top") + 
+  scale_colour_manual(values = c("blue","forestgreen","red"),name="",labels=c("100% - cumulative % Meridian Bridge detections","Cumulative % Tower Bridge detections minus Benicia East","Cumulative % Benicia East detections"))+
+  guides(color = guide_legend(nrow=3,byrow=TRUE))
+
+plot_monitoring_WR_hat
+
+#Create figure for hatchery Winter-run distribution estimates
+
+data_WR_hat <-distribution_data_edit %>% select(Date,Hatch_WR_YTE,Hatch_WR_ID,Hatch_WR_E) %>% gather("Category","Percent",2:4) 
+
+plot_distest_WR_hat <- ggplot() +  
+  geom_line(data=data_WR_hat, aes(Date, Percent, colour=Category),size=1) + 
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_YTE_Upper, ymin=Hatch_WR_YTE_Lower), 
+              alpha=0.2,fill="blue")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_ID_Upper, ymin=Hatch_WR_ID_Lower), 
+              alpha=0.2,fill="forestgreen")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_E_Upper, ymin=Hatch_WR_E_Lower), 
+              alpha=0.2,fill="red") +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  ggtitle("(A)")+
+  theme(plot.title=element_text(size=13), 
+        axis.text.x=element_text(size=9, color="black"), 
+        axis.text.y = element_text(size=8, color="black"), 
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 9, angle = 90),
+        strip.text = element_text(size = 7),
+        legend.position = "top") + 
+  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
+
+plot_distest_WR_hat
+
+
+
+#Print figure
+tiff(filename=file.path("output","Figure_DistEst_WinterRun_Hatchery.tiff"),
+     type="cairo",
+     units="in", 
+     width=8, #10*1, 
+     height=10, #22*1, 
+     pointsize=5, #12, 
+     res=600,
+     compression="lzw")
+grid.arrange(plot_distest_WR_hat, plot_monitoring_WR_hat, ncol=1,nrow=2)
 
 dev.off()
 
-#Natural Spring-run
-tiff(filename="Fig_NaturalSpring_DistributionEstimates.tiff",width=10,height = 8, units = "in",  res=300, compression ="lzw")
-
-plot(Natural_SR_YTE ~ Date, distribution_data, xaxt = "n", type = "l", col="black",main="Natural Spring-Run",ylab="Percentage of Population",xlab="")
-lines(distribution_data$Date, distribution_data$Natural_SR_ID, col = "black", type = "l", lty = 2)
-lines(distribution_data$Date, distribution_data$Natural_SR_E, col = "black", type = "l", lty = 3)
-axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
-legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
-       col=c("black", "black",'black'), lty=1:3, cex=0.8)
-
-dev.off()
 
 
-#Natural Steelhead
-tiff(filename="Fig_NaturalSteelhead_DistributionEstimates.tiff",width=10,height = 8, units = "in",  res=300, compression ="lzw")
 
-plot(Natural_SH_YTE ~ Date, distribution_data, xaxt = "n", type = "l", col="black",main="Natural Steelhead",ylab="Percentage of Population",xlab="")
-lines(distribution_data$Date, distribution_data$Natural_SH_ID, col = "black", type = "l", lty = 2)
-lines(distribution_data$Date, distribution_data$Natural_SH_E, col = "black", type = "l", lty = 3)
-axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
-legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
-       col=c("black", "black",'black'), lty=1:3, cex=0.8)
 
-dev.off()
-
-#Hatchery Winter-run
-tiff(filename="Fig_HatcheryWinter_DistributionEstimates.tiff",width=10,height = 8, units = "in",  res=300, compression ="lzw")
-
-plot(Hatch_WR_YTE ~ Date, distribution_data, xaxt = "n", type = "l", col="black",main="Hatchery Winter-Run",ylab="Percentage of Population",xlab="")
-lines(distribution_data$Date, distribution_data$Hatch_WR_ID, col = "black", type = "l", lty = 2)
-lines(distribution_data$Date, distribution_data$Hatch_WR_E, col = "black", type = "l", lty = 3)
-axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
-legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
-       col=c("black", "black",'black'), lty=1:3, cex=0.8)
-
-dev.off()
 
 ##################### Test code
 
