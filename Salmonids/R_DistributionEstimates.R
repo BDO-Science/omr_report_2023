@@ -233,6 +233,8 @@ acoustic_data <- acoustic_data_raw %>% select(Date,MeridianBr,TowerBridge, Benic
   gather("Category","Percent",2:4) %>% mutate(Date=as.Date(Date))%>%
   mutate(Percent=Percent*100)
 
+acoustic_data$Category<-factor(acoustic_data$Category, levels=c('Reverse_MeridianBr','TowerBridge_minus_Benicia', 'Benicia_east'))
+
 #Hatchery winter-run acoustic tag data analog to dist estimates
 plot_monitoring_WR_hat <- ggplot() +  
   geom_line(data=acoustic_data, aes(Date, Percent, colour=Category),size=1) +
