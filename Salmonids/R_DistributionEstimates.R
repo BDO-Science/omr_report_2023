@@ -1,5 +1,7 @@
 library(tidyverse)
 library(readxl)
+library(grid)
+library(gridExtra)
 
 # Load distribution estimate data
 distribution_data<-read_excel(file.path("data","DistributionEstimates_WOMT_WY2023.xlsx"),sheet="DATA Dist WOMT Export OMRrange")
@@ -35,6 +37,8 @@ distribution_data_edit <- dist_est_split(datafile=distribution_data_edit,old_col
 distribution_data_edit <- dist_est_split(datafile=distribution_data_edit,old_col="Natural_SH_ID_Range",newcol1="Natural_SH_ID_Lower",newcol2="Natural_SH_ID_Upper")
 distribution_data_edit <- dist_est_split(datafile=distribution_data_edit,old_col="Natural_SH_E_Range",newcol1="Natural_SH_E_Lower",newcol2="Natural_SH_E_Upper")
 
+distribution_data_edit$Date=as.Date(distribution_data_edit$Date)
+
 #Load monitoring csv data from SacPAS
 #https://www.cbr.washington.edu/sacramento/data/query_sampling_graph.html
 monitoring_data_raw <- read.csv(file.path("data","samplingdaily_1686867510_630.csv"))
@@ -52,32 +56,168 @@ monitoring_data_WR <- monitoring_data_raw %>% rename(
   filter(!is.na(Date)) %>% select(-c(SacSeine, SacTrawl)) %>%
   mutate(KL_RST = replace_na(KL_RST, 0),ChippsTrawl=replace_na(ChippsTrawl, 0)) %>%
   mutate(KL_RST_sum=cumsum(KL_RST),ChippsTrawl_sum=cumsum(ChippsTrawl),SacTrawl_Seine_sum=cumsum(SacTrawl_Seine)) %>%
-  mutate(KL_RST_sum=KL_RST_sum/max(KL_RST_sum),ChippsTrawl_sum=ChippsTrawl_sum/max(ChippsTrawl_sum),SacTrawl_Seine_sum=SacTrawl_Seine_sum/max(SacTrawl_Seine_sum)) 
+  mutate(KL_RST_sum=KL_RST_sum/max(KL_RST_sum),ChippsTrawl_sum=ChippsTrawl_sum/max(ChippsTrawl_sum),SacTrawl_Seine_sum=SacTrawl_Seine_sum/max(SacTrawl_Seine_sum)) %>%
+  mutate(Reverse_KL_RST = 1-KL_RST_sum, SacTrawl_Seine_sum_minus_Chipps=SacTrawl_Seine_sum-ChippsTrawl_sum)
 
-monitoring_data_WR <- monitoring_data_WR %>% select(Date,KL_RST_sum,ChippsTrawl_sum,SacTrawl_Seine_sum) %>%
-  gather("Category","Percent",2:4)
+#Create winter run LAD monitoring data per DFW's figure
+monitoring_data_WR_sum <- monitoring_data_WR %>% 
+  select(Date,Reverse_KL_RST,SacTrawl_Seine_sum_minus_Chipps,ChippsTrawl_sum) %>%
+  gather("Category","Percent",2:4) %>% mutate(Date=as.Date(Date))%>%
+  mutate(Percent=Percent*100)
 
+monitoring_data_WR_sum$Category<-factor(monitoring_data_WR_sum$Category, levels=c('Reverse_KL_RST','SacTrawl_Seine_sum_minus_Chipps', 'ChippsTrawl_sum'))
+
+########################
 #Create figure for Natural Winter-run LAD distribution estimates
 str(distribution_data_edit)
-data_WR_nat<-distribution_data_edit %>% select(Date,Natural_WR_YTE,Natural_WR_ID,Natural_WR_E) %>% gather("Category","Percent",2:4)
+data_WR_nat<-distribution_data_edit %>% select(Date,Natural_WR_YTE,Natural_WR_ID,Natural_WR_E) %>% gather("Category","Percent",2:4) 
 
+#Winter-run distribution estimates
 plot_distest_WR_nat <- ggplot() +  
-  geom_line(data=data_WR_nat, aes(Date, Percent, colour=Category)) + 
+  geom_line(data=data_WR_nat, aes(Date, Percent, colour=Category),size=1) + 
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_YTE_Upper, ymin=Natural_WR_YTE_Lower), 
               alpha=0.2,fill="blue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_ID_Upper, ymin=Natural_WR_ID_Lower), 
-              alpha=0.2,fill="green")+
+              alpha=0.2,fill="forestgreen")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_E_Upper, ymin=Natural_WR_E_Lower), 
-              alpha=0.2,fill="red")+
-  ylim(-5, 105)
-distest_WR_nat
+              alpha=0.2,fill="red") +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  ggtitle("(A)")+
+  theme(plot.title=element_text(size=13), 
+                 axis.text.x=element_text(size=9, color="black"), 
+                 axis.text.y = element_text(size=8, color="black"), 
+                 axis.title.x = element_blank(),
+                 axis.title.y = element_text(size = 9, angle = 90),
+                 strip.text = element_text(size = 7),
+                 legend.position = "top") + 
+  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
 
+plot_distest_WR_nat
+
+#Winter-run monitoring data analog to dist estimates
 plot_monitoring_WR_nat <- ggplot() +  
-  geom_line(data=monitoring_data_WR, aes(Date, Percent, colour=Category))
+  geom_line(data=monitoring_data_WR_sum, aes(Date, Percent, colour=Category),size=1) +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  ggtitle("(B)")+
+  theme(plot.title=element_text(size=13), 
+        axis.text.x=element_text(size=9, color="black"), 
+        axis.text.y = element_text(size=8, color="black"), 
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 9, angle = 90),
+        strip.text = element_text(size = 7),
+        legend.position = "top") + 
+  scale_colour_manual(values = c("blue","forestgreen","red"),name="",labels=c("100% - cumulative % Knights Landing catch","Cumulative % combined Sacramento trawl and seine catch minus Chipps Trawl catch","Cumulative % Chipps Trawl Catch"))+
+  guides(color = guide_legend(nrow=3,byrow=TRUE))
+  
 plot_monitoring_WR_nat
 
 
-###################################################################3
+#Print figure
+tiff(filename=file.path("output","Figure_DistEst_WinterRun.tiff"),
+     type="cairo",
+     units="in", 
+     width=8, #10*1, 
+     height=10, #22*1, 
+     pointsize=5, #12, 
+     res=600,
+     compression="lzw")
+grid.arrange(plot_distest_WR_nat, plot_monitoring_WR_nat, ncol=1,nrow=2)
+
+dev.off()
+
+###################
+
+#Create figure for Spring-run LAD distribution estimates
+data_SR<-distribution_data_edit %>% select(Date,Natural_SR_YTE,Natural_SR_ID,Natural_SR_E) %>% gather("Category","Percent",2:4) 
+
+#Spring-run distribution estimates
+plot_distest_SR <- ggplot() +  
+  geom_line(data=data_SR, aes(Date, Percent, colour=Category),size=1) + 
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_YTE_Upper, ymin=Natural_SR_YTE_Lower), 
+              alpha=0.2,fill="blue")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_ID_Upper, ymin=Natural_SR_ID_Lower), 
+              alpha=0.2,fill="forestgreen")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_E_Upper, ymin=Natural_SR_E_Lower), 
+              alpha=0.2,fill="red") +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  theme(plot.title=element_text(size=13), 
+        axis.text.x=element_text(size=9, color="black"), 
+        axis.text.y = element_text(size=8, color="black"), 
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 9, angle = 90),
+        strip.text = element_text(size = 7),
+        legend.position = "top") + 
+  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
+
+plot_distest_SR
+
+#Print figure
+tiff(filename=file.path("output","Figure_DistEst_SpringRun.tiff"),
+     type="cairo",
+     units="in", 
+     width=10, #10*1, 
+     height=6, #22*1, 
+     pointsize=5, #12, 
+     res=600,
+     compression="lzw")
+plot_distest_SR
+dev.off()
+
+
+###################
+
+#Create figure for Steelhead distribution estimates
+data_SH<-distribution_data_edit %>% select(Date,Natural_SH_YTE,Natural_SH_ID,Natural_SH_E) %>% gather("Category","Percent",2:4) 
+
+#Spring-run distribution estimates
+plot_distest_SH <- ggplot() +  
+  geom_line(data=data_SH, aes(Date, Percent, colour=Category),size=1) + 
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_YTE_Upper, ymin=Natural_SH_YTE_Lower), 
+              alpha=0.2,fill="blue")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_ID_Upper, ymin=Natural_SH_ID_Lower), 
+              alpha=0.2,fill="forestgreen")+
+  geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_E_Upper, ymin=Natural_SR_E_Lower), 
+              alpha=0.2,fill="red") +
+  theme_bw() +
+  scale_x_date(date_breaks = "1 month",
+               date_labels="%B",
+               limits = as.Date(c('2022-10-01','2023-07-01')))+
+  theme(plot.title=element_text(size=13), 
+        axis.text.x=element_text(size=9, color="black"), 
+        axis.text.y = element_text(size=8, color="black"), 
+        axis.title.x = element_blank(),
+        axis.title.y = element_text(size = 9, angle = 90),
+        strip.text = element_text(size = 7),
+        legend.position = "top") + 
+  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
+
+plot_distest_SH
+
+#Print figure
+tiff(filename=file.path("output","Figure_DistEst_Steelhead.tiff"),
+     type="cairo",
+     units="in", 
+     width=10, #10*1, 
+     height=6, #22*1, 
+     pointsize=5, #12, 
+     res=600,
+     compression="lzw")
+plot_distest_SH
+dev.off()
+
+###################################################################
 df <- data.frame(x = c(NA, "x.y", "x.z", "y.z"))
 str(df)
 df %>% separate(x, c("A", "B"))
@@ -132,3 +272,17 @@ legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta
        col=c("black", "black",'black'), lty=1:3, cex=0.8)
 
 dev.off()
+
+##################### Test code
+
+
+plot(Natural_WR_YTE ~ Date, distribution_data_edit, xaxt = "n", type = "l", col="black",main="Natural Winter-Run",ylab="Percentage of Population",xlab="")
+lines(distribution_data_edit$Date, distribution_data_edit$Natural_WR_ID, col = "black", type = "l", lty = 2)
+lines(distribution_data_edit$Date, distribution_data_edit$Natural_WR_E, col = "black", type = "l", lty = 3)
+polygon(x = c(distribution_data_edit$Date, distribution_data_edit$Date[length(distribution_data_edit$Date)], rev(distribution_data_edit$Date), distribution_data_edit$Date[1]),
+        y = c(distribution_data_edit$Natural_WR_YTE_Lower, distribution_data_edit$Natural_WR_YTE_Upper[length(distribution_data_edit$Natural_WR_YTE_Upper)], rev(distribution_data_edit$Natural_WR_YTE_Upper), distribution_data_edit$Natural_WR_YTE_Lower[1]),
+        border=NA, col=gray(0.2,0.25))
+axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
+legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
+       col=c("black", "black",'black'), lty=1:3, cex=0.8)
+
