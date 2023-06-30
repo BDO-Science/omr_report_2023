@@ -43,14 +43,18 @@ FPT.cfs <- cdec_query("FPT", "20", "D", start.date, end.date)%>%
   rename(date = datetime)%>%
   mutate(date = as.Date(date))
 
+MSD.f <- cdec_query("MSD", 25, "E", start.date, end.date) %>% 
+  mutate(date = date(datetime))
 
+PPT.f <- cdec_query("PPT", 25, "E", start.date, end.date)%>% 
+  mutate(date = date(datetime)) 
 
 #### Old method  of creating data
 
 # DateSeriesWY2023 <- data.frame(date = seq(as.Date(start.date),as.Date(end.date), by = "1 days"))
 # date.key = DateSeriesWY2023
 
-#### Clean up data and make sure no dates missing -------------------------------
+#### Clean up data and make sure not too many dates missing -------------------------------
 
 OBI.fnu.smelt <- OBI.fnu %>%
   select(date, parameter_value) %>% rename(OBI.fnu.smelt = parameter_value) %>%
@@ -78,17 +82,40 @@ FPT.fnu.smelt <- FPT.fnu %>%
 
 (FPT.fnu.smelt %>% filter(is.na(FPT.fnu.smelt))) # 6 days missing
 
-CLC.C.smelt <- clc.C %>% 
+CLC.F.smelt <- clc.C %>% 
   select(date, parameter_value) %>% rename(CLC.C.smelt = parameter_value) %>%
+  mutate(CLC.F.smelt = (CLC.C.smelt * 9/5) + 32) %>%
   pad
 
-(CLC.C.smelt %>% filter(is.na(CLC.C.smelt))) # 0 days missing
+(CLC.F.smelt %>% filter(is.na(CLC.F.smelt))) # 0 days missing
 
+MSD.F.salmon <- MSD.f %>%
+  group_by(date) %>% 
+  mutate(msd.F = mean(parameter_value,na.rm =TRUE)) %>% 
+  ungroup() %>%
+  select(date, msd.F) %>% 
+  distinct() %>% 
+  drop_na() %>%
+  pad() %>%
+  arrange(date) 
+
+PPT.F.salmon <- PPT.f %>%
+  group_by(date) %>% 
+  mutate(ppt.F = mean(parameter_value,na.rm =TRUE)) %>% 
+  ungroup() %>%
+  select(date, ppt.F) %>% 
+  distinct() %>% 
+  drop_na() %>%
+  pad() %>%
+  arrange(date) 
 
 # Combine into one df and write ----------------------------------
-smelt_env_params <- reduce(list(OBI.fnu.smelt, FPT.cfs.smelt, FPT.fnu.smelt, CLC.C.smelt), dplyr::left_join, by = "date")
+smelt_env_params <- reduce(list(OBI.fnu.smelt, FPT.cfs.smelt, FPT.fnu.smelt), dplyr::left_join, by = "date")
 # write_csv(smelt_env_params, "EnvironmentalConditions/output/Data_smelt_environmental.csv")
 
+offramp_env_params <- reduce(list(CLC.F.smelt, MSD.F.salmon, PPT.F.salmon), dplyr::left_join, by = "date") %>%
+  filter(date>="2023-06-01")
+ # write_csv(offramp_env_params, "EnvironmentalConditions/output/Offramp_temperatures_smelt_salmon.csv")
 
 # Make plots -----------------------------------------
 
@@ -123,14 +150,30 @@ theme_plots <- theme(axis.title.x = element_blank(),
 (plot_fpt <- plot_fpt1/plot_fpt2)
 
 
-(plot_clc <- ggplot(smelt_env_params) + 
-    geom_hline(yintercept = 25, linewidth = 1, linetype = "dashed", color = "gray70") +
-    geom_line(aes(date, CLC.C.smelt)) +
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") + 
-    scale_y_continuous(breaks = seq(0,26, 2)) +
-    labs(y = "CLC Temperature (°C)") +
+(plot_clc <- ggplot(offramp_env_params) + 
+    geom_hline(yintercept = 77, linewidth = 1, linetype = "dashed", color = "gray70") +
+    geom_line(aes(date, CLC.F.smelt)) +
+    labs(y = "CLC Temperature (°C)", title = "C") +
     theme_bw() +
     theme_plots)
+
+(plot_msd <- ggplot(offramp_env_params) + 
+    geom_hline(yintercept = 71.6, linewidth = 1, linetype = "dashed", color = "gray70") +
+    geom_line(aes(date, msd.F)) +
+    labs(y = "MSD Temperature (°F)", title = "A") +
+    theme_bw() +
+    theme_plots)
+
+(plot_ppt <- ggplot(offramp_env_params) + 
+    geom_hline(yintercept = 71.6, linewidth = 1, linetype = "dashed", color = "gray70") +
+    geom_line(aes(date, ppt.F)) +
+    labs(y = "PPT Temperature (°F)", title = "B") +
+    theme_bw() +
+    theme_plots)
+
+(plot_offramp <- plot_msd/plot_ppt/plot_clc)
+
+
 
 # Write plots------------------------------------------
 tiff("EnvironmentalConditions/output/Figure_obi_turbidity.tiff", width = 8, height = 5, units = "in", res = 300, compression = "lzw")
@@ -141,6 +184,6 @@ tiff("EnvironmentalConditions/output/Figure_fpt_flow_turbidity.tiff", width = 8,
 plot_fpt
 dev.off()
 
-tiff("EnvironmentalConditions/output/Figure_clc_temperature.tiff", width = 8, height = 5, units = "in", res = 300, compression = "lzw")
-plot_clc
+tiff("EnvironmentalConditions/output/Figure_offramp_temperatures.tiff", width = 7, height = 9, units = "in", res = 300, compression = "lzw")
+plot_offramp
 dev.off()
