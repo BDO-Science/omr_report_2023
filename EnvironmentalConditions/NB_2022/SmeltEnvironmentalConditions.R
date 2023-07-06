@@ -5,17 +5,24 @@ library(lubridate)
 library(data.table)
 library(plotrix)
 library(readxl)
+library(padr)
 
 
 #sets the dates to be pulled from cdec for the OMR season
 
-start.date <- "2021-10-01"
-end.date <- "2022-06-28"
+start.date <- "2022-10-01"
+end.date <- "2023-06-28"
 
-#series of cdec queries to pull data needed to fill out the reports datafile
+#series of cdec queries to pull data needed to fill out the reports datafile ------------
 clc.C <- cdec_query("CLC", "146", "D", start.date, end.date)
 
-OBI.fNU <- cdec_query("OBI", "221", "D", start.date, end.date)
+OBI.fnu <- cdec_query("OBI", "221", "D", start.date, end.date) %>%
+  rename(date = datetime) %>%
+  mutate(date = as.Date(date))
+
+OBI.fnu.event <- cdec_query("OBI", "221", "E", start.date, end.date) %>%
+  rename(date = datetime) %>%
+  mutate(date = as.Date(date))
 
 FPT.cfs <- cdec_query("FPT", "20", "D", start.date, end.date)
 
@@ -23,15 +30,35 @@ FPT.fnu <- cdec_query("FPT", "221", "D", start.date, end.date)
 
 FPT.cfs <- cdec_query("FPT", "20", "D", start.date, end.date)
 
-############################
-###########
-###########
-DateSeriesWY2022 <- read_excel("DateSeriesWY2022.xlsx", 
-                               col_types = c("date"))
-#View(DateSeriesWY2022)
-date.key <- DateSeriesWY2022
+#### Clean up data and make sure no dates missing -------------------------------
 
-##########################################################################################
+obi.fnu.alldates <- OBI.fnu %>%
+  select(datetime, parameter_value) %>% rename(OBI.fnu.smelt = parameter_value) %>%
+  pad #double check all dates in there
+
+(obi.fnu.alldates %>% filter(is.na(parameter_value))) # 1 day missing
+
+FPT.cfs.smelt <- FPT.cfs %>% 
+  select(datetime, parameter_value) %>% rename(FPT.cfs.smelt = parameter_value) %>%
+  pad
+
+FPT.fnu.smelt <- FPT.fnu %>%
+  select(datetime, parameter_value) %>% rename(FPT.fnu.smelt = parameter_value) %>%
+  pad
+
+CLC.C.smelt <- clc.C %>% 
+  select(datetime, parameter_value) %>% rename(CLC.C.smelt = parameter_value) %>%
+  pad
+
+
+
+
+
+
+obi_fill <- OBI.fnu.event %>%
+  filter(date == "2023-01-12") %>%
+  summarize(mean(parameter_value, na.rm = TRUE))
+
 #checks date.key against the dates recorded by the sensor
 
 #appends the date key to the cdec dataframe
