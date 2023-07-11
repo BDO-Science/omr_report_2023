@@ -1,0 +1,297 @@
+---
+title: "OMR Report"
+author: "Nicole"
+date: '2022-06-22'
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+# Load packages
+```{r}
+library(tidyverse)
+library(lubridate)
+library(ggpubr)
+```
+# Chipps figure
+```{r}
+#data provided by Stephen Staiger
+
+chipps <- read.csv("Chipps Island Trawls LFS oct2021-june2022.csv", stringsAsFactors = F)
+chipps$SampleDate<-mdy(chipps$SampleDate)
+chipps$CatchCount<-as.numeric(chipps$CatchCount)
+
+#filter to >60mm
+chipps.ad <- filter(chipps, ForkLength >= 60)
+
+#plot catch over time
+ggplot(data=chipps.ad, aes(x=SampleDate, y=CatchCount)) +
+    geom_bar(stat="identity") +
+    theme_bw() +
+    ylab("LFS Catch") +
+    xlab("Month") +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b")
+
+ggsave("Plots/chipps_plot.png", height=4, width=7, units="in")
+```
+# SLS & 20mm figure
+```{r}
+#data provided by Vanessa Mora
+
+twentymm <- read.csv("20-mm LFS Catch Data 2022_combo.csv", stringsAsFactors = F)
+twentymm$SampleDate<-dmy(twentymm$SampleDate)
+twentymm$Catch<-twentymm$Catch.per.tow
+
+sls <- read.csv("SLS LFS Catch Data 2022_combo.csv", stringsAsFactors = F)
+sls$SampleDate<-dmy(sls$Date)
+
+#combine datasets
+twentymm2 <- twentymm[c(9,2,3,4,11,10)]
+sls2 <- sls[c(9,11,3,4,7,10)]
+
+survey <- rbind(twentymm2,sls2)
+survey$my <- format(as.Date(survey$SampleDate, format="%m/%Y/%d"),"%m/%y")
+
+#get monthly catch
+month<-survey %>% 
+  group_by(Region, my) %>% 
+  summarize("Count"= sum(Catch))
+
+#plot
+cbbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73")
+
+month$my <- factor(month$my, levels=c("12/21", "01/22", "02/22", "03/22", "04/22", "05/22", "06/22"))
+
+ggplot(data=month, aes(x=my, y=Count, fill=Region)) +
+    geom_bar(stat = "identity", position="dodge2") +
+    theme_bw() +
+    ylab("Count of LFS (SLS & 20mm catch)") +
+    xlab("Month") +
+    scale_fill_manual(values=cbbPalette)
+
+ggsave("Plots/catch_plot.png", height=4, width=7, units="in")
+
+#get total catch per region to inform text updates
+year<-survey %>% 
+  group_by(Region) %>% 
+  summarize("Count"= sum(Catch))
+
+#get total catch by month to inform text updates
+totalm<-survey %>% 
+  group_by(my) %>% 
+  summarize("Count"= sum(Catch))
+
+#plot by survey
+
+#get monthly catch
+month2<-survey %>% 
+  group_by(Region, Survey, my) %>% 
+  summarize("Count"= sum(Catch))
+
+#plot
+cbbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73")
+
+month2$my <- factor(month2$my, levels=c("12/21", "01/22", "02/22", "03/22", "04/22", "05/22", "06/22"))
+
+ggplot(data=month2, aes(x=my, y=Count, fill=Region)) +
+    geom_bar(stat = "identity", position="dodge2") +
+    facet_wrap(~Survey, ncol=1) +
+    theme_bw() +
+    ylab("Count of LFS") +
+    xlab("Month") +
+    theme(legend.position = "right") +
+    scale_fill_manual(values=cbbPalette) + 
+    theme(text = element_text(size = 14)) +
+    theme(axis.text = element_text(size = 13)) 
+    
+ggsave("Plots/catch_plot2.png", height=8, width=8.5, units="in")
+```
+# SLS & 20mm CSD stations figure
+```{r}
+#survey plot-------------------------------
+survey.csd <- filter(survey, Region == "Central & South Delta")
+survey.csd$Station<-as.character(survey.csd$Station)
+
+survey.csd$SampleDate <- format(as.Date(survey.csd$SampleDate, format="%Y/%m/%d"),"%m/%d/%y")
+
+#sum by station
+csd.surv1<-survey.csd %>% 
+  group_by(SampleDate, Survey, Station, Survey.Num) %>% 
+  summarize("Count"= sum(Catch))
+
+csd.surv1$Detec <- 1
+
+#sum stations with detection by survey
+csd.surv<-csd.surv1 %>% 
+  group_by(SampleDate, Survey, Survey.Num) %>% 
+  summarize("detections"= sum(Detec))
+
+#need to combine survey dates - chose latest 
+write.csv(csd.surv, "csd.surv.csv")
+csd.surv2 <- read.csv("csd.surv2.csv")
+csd.surv2$SampleDate <- format(as.Date(csd.surv2$SampleDate, format="%m/%d/%Y"),"%m/%d/%y")
+
+csd.surv2$SampleDate <- as.character(csd.surv2$SampleDate)
+
+csd.surv2$SampleDate <- factor(csd.surv2$SampleDate, levels=c("12/13/21", "12/27/21", "01/18/22", "01/24/22","02/08/22", "02/22/22", "03/07/22", "03/21/22", "03/22/22", "04/06/22", "04/19/22", "05/03/22", "05/17/22"))
+
+#plot
+su <- ggplot(data=csd.surv2, aes(x=SampleDate, y=detections, fill=Survey)) +
+    geom_col(width = .5) +
+    theme_bw() +
+    ylab("Count of CSD stations with LFS detections") +
+    xlab("Survey") +
+    scale_fill_manual(values=cbbPalette) +
+    theme(axis.text.x = element_text(angle = 25))
+su
+surv <- su + geom_hline(yintercept=4, linetype="dashed", color = "black", size = .8)
+surv
+
+#station plot------------------------------
+#sum by station
+csd.stat<-survey.csd %>% 
+  group_by(SampleDate, Survey, Station) %>% 
+  summarize("Count"= mean(Catch))
+
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "#661100", "#6699CC", "#888888")
+
+csd.stat$SampleDate <- as.character(csd.stat$SampleDate)
+
+csd.stat$SampleDate <- factor(csd.stat$SampleDate, levels=c("12/13/21", "12/27/21", "01/18/22", "01/24/22","02/08/22", "02/22/22", "03/07/22", "03/21/22", "03/22/22", "04/05/22", "04/06/22", "04/18/22", "04/19/22", "05/03/22", "05/17/22"))
+
+#plot catch by station
+s <- ggplot(data=csd.stat, aes(x=SampleDate, y=Count, fill=Station)) +
+    geom_col(position = position_dodge2(width = 0.9, preserve = "single")) +
+    theme_bw() +
+    ylab("Catch per tow of LFS (at CSD stations)") +
+    xlab("Survey Date") +
+    scale_fill_manual(values=safe_colorblind_palette)+
+    theme(axis.text.x = element_text(angle = 25))
+
+stat <- s + geom_hline(yintercept=5, linetype="dashed", color = "black", size = .8)
+
+#combine----------------------------------
+
+figure <- ggarrange(surv, stat,
+                    labels = c("A", "B"),
+                    ncol = 1, nrow = 2)
+figure
+
+ggsave("Plots/survey_station_plot.png", height=8, width=7, units="in")
+
+#notes: 
+#COA 8.4.2 covers larval and juvenile Longfin Smelt (LFS) entrainment protection. One of the  criteria is “From January 1 through June 30, when a single Smelt Larva Survey (SLS) or 20-mm Survey (20-mm) sampling period exceeds one of the following thresholds: LFS catch per tow exceeds five LFS larvae or juveniles in two or more of the 12 stations in the central Delta and south Delta (Stations 809, 812, 815, 901, 902, 906, 910, 912, 914, 915, 918, 919).” Occasionally adverse conditions, such as excessive submerged aquatic vegetation, require survey crews to reduce the tow duration to effectively sample a station. If tow duration is reduced at a station, the catch during that shorter tow shall be expanded to be representative of a standard 10-minute tow to determine if the threshold is exceeded. For example, if three LFS larvae are caught during a five-minute tow the catch will be expanded to six LFS larvae and therefore the threshold will be considered exceeded and the COA triggered. In the case of the 20-mm Survey, which conducts multiple tows at a station, the threshold is considered exceeded if the average of all tows conducted at station, during a single survey, exceeds five LFS larvae.
+```
+# BSPP figure
+```{r}
+#data can be found at BKS station in CDEC, "discharge,pumping"
+
+bspp <- read.csv("BSPP.csv", stringsAsFactors = F)
+bspp$Date<-dmy(bspp$Date)
+
+#plot flow and catch, manually add detection dates as points
+p <-ggplot(data=bspp, aes(x=Date, y=Barker.Slough.Pumping)) +
+    geom_line(size=1) +
+    theme_bw() +
+    ylab("BSPP Flow (cfs)") +
+    xlab("Month") +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+    geom_point(aes(x = as.Date("2022-04-07"), y=0), size = 3, colour = "Red")+
+    geom_point(aes(x = as.Date("2021-12-15"), y=0), size = 3, colour = "Red")+
+    geom_point(aes(x = as.Date("2021-12-28"), y=0), size = 3, colour = "Red")+
+    geom_point(aes(x = as.Date("2022-01-26"), y=0), size = 3, colour = "Red")+    
+    geom_point(aes(x = as.Date("2022-02-09"), y=0), size = 3, colour = "Red")+
+    geom_point(aes(x = as.Date("2022-03-08"), y=0), size = 3, colour = "Red")+
+    geom_point(aes(x = as.Date("2022-03-21"), y=0), size = 3, colour = "Orange")
+
+p + geom_hline(yintercept=60, linetype="dashed", color = "gray", size = .8)
+
+ggsave("Plots/bspp_plot.png", height=4, width=7, units="in")
+```
+# Salvage & OMR flow figure
+```{r}
+#data from: Walter Griffiths and pulled from tables posted at https://filelib.wildlife.ca.gov/Public/salvage/SMELT_SALVAGE_TABLES/
+
+salvage <- read.csv("Total.Salvage_2022.csv", stringsAsFactors = F)
+salvage$Date<-mdy(salvage$DATE)
+
+#plot seasonal salvage
+sal <- ggplot() +
+    geom_line(data=salvage, aes(x=Date, y=State.Season.Salvage), color="blue", size=1) +
+    geom_line(data=salvage, aes(x=Date, y=Federal.Season.Salvage), color="orange", size=1) +
+    theme_bw() +
+    ylab("LFS Seasonal Salvage") +
+    xlab("Date") +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+    theme(axis.text = element_text(size = 12)) 
+
+#plot flow
+salvage$OMR <- as.numeric(salvage$Middle...Old.R.Net.Daily.Flow..cfs.)
+
+flow <- ggplot() +
+    geom_line(data=salvage, aes(x=Date, y= OMR), size=1) +
+    theme_bw() +
+    ylab("Middle + Old River net daily flow (cfs)") +
+    xlab("Date") +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b")+
+    theme(axis.text = element_text(size = 12)) 
+
+figure <- ggarrange(sal, flow,
+                    labels = c("A", "B"),
+                    ncol = 1, nrow = 2)
+figure
+
+ggsave("Plots/2022salvage.png", height=7, width=8, units="in")
+```
+# Historical LFS salvage figure
+```{r}
+hist <- read.csv("LFS Table_Historical_WG.csv", stringsAsFactors = F)
+
+hist$Date<-ymd(hist$Date)
+
+#filter datasets to combine
+hist2 <- hist[(hist$Date < "2020-01-01"),]
+
+#get annual salvage
+hist3 <- hist2 %>% 
+  group_by(Year) %>% 
+  summarize("Total"= sum(Grand.Total,  na.rm = TRUE))
+
+hist3 <- hist3[!is.na(hist3$Year),]
+
+#create table with recent years
+df <- data.frame (Year  = c(2020, 2021, 2022),
+                  Total = c(2686, 865, 7448))
+
+df$Year <- as.integer(df$Year)
+
+#combine
+salv <- rbind(hist3,df)
+
+salv$Year <- as.character(salv$Year)
+
+#plot
+all <- ggplot(data=salv, aes(x=Year, y=Total)) +
+    geom_col(stat="identity",color="black", fill="gray")+
+    theme_bw() +
+    ylab("Total LFS Salvage") +
+    xlab("Calendar Year") +
+    theme(axis.text.x = element_text(angle = 90))
+
+#remove 2002 & prior so you can see numbers for 2003-2022 better
+salv.rm <- salv[-c(1:10), ]
+
+rec <- ggplot(data=salv.rm, aes(x=Year, y=Total)) +
+    geom_col(stat="identity",color="black", fill="gray")+
+    theme_bw() +
+    ylab("Total LFS Salvage") +
+    xlab("Calendar Year") +
+    theme(axis.text.x = element_text(angle = 90))
+
+figure <- ggarrange(rec, all,
+                    labels = c("A", "B"),
+                    ncol = 1, nrow = 2)
+figure
+
+ggsave("Plots/salvage.png", height=7, width=8, units="in")
+```
