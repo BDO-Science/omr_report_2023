@@ -182,37 +182,11 @@ ggsave("Plots/survey_station_plot.png", height=8, width=7, units="in")
 #notes: 
 #COA 8.4.2 covers larval and juvenile Longfin Smelt (LFS) entrainment protection. One of the  criteria is “From January 1 through June 30, when a single Smelt Larva Survey (SLS) or 20-mm Survey (20-mm) sampling period exceeds one of the following thresholds: LFS catch per tow exceeds five LFS larvae or juveniles in two or more of the 12 stations in the central Delta and south Delta (Stations 809, 812, 815, 901, 902, 906, 910, 912, 914, 915, 918, 919).” Occasionally adverse conditions, such as excessive submerged aquatic vegetation, require survey crews to reduce the tow duration to effectively sample a station. If tow duration is reduced at a station, the catch during that shorter tow shall be expanded to be representative of a standard 10-minute tow to determine if the threshold is exceeded. For example, if three LFS larvae are caught during a five-minute tow the catch will be expanded to six LFS larvae and therefore the threshold will be considered exceeded and the COA triggered. In the case of the 20-mm Survey, which conducts multiple tows at a station, the threshold is considered exceeded if the average of all tows conducted at station, during a single survey, exceeds five LFS larvae.
 ```
-# BSPP figure
-```{r}
-#data can be found at BKS station in CDEC, "discharge,pumping"
-
-bspp <- read.csv("BSPP.csv", stringsAsFactors = F)
-bspp$Date<-dmy(bspp$Date)
-
-#plot flow and catch, manually add detection dates as points
-p <-ggplot(data=bspp, aes(x=Date, y=Barker.Slough.Pumping)) +
-    geom_line(size=1) +
-    theme_bw() +
-    ylab("BSPP Flow (cfs)") +
-    xlab("Month") +
-    scale_x_date(date_breaks = "1 month", date_labels = "%b") +
-    geom_point(aes(x = as.Date("2022-04-07"), y=0), size = 3, colour = "Red")+
-    geom_point(aes(x = as.Date("2021-12-15"), y=0), size = 3, colour = "Red")+
-    geom_point(aes(x = as.Date("2021-12-28"), y=0), size = 3, colour = "Red")+
-    geom_point(aes(x = as.Date("2022-01-26"), y=0), size = 3, colour = "Red")+    
-    geom_point(aes(x = as.Date("2022-02-09"), y=0), size = 3, colour = "Red")+
-    geom_point(aes(x = as.Date("2022-03-08"), y=0), size = 3, colour = "Red")+
-    geom_point(aes(x = as.Date("2022-03-21"), y=0), size = 3, colour = "Orange")
-
-p + geom_hline(yintercept=60, linetype="dashed", color = "gray", size = .8)
-
-ggsave("Plots/bspp_plot.png", height=4, width=7, units="in")
-```
 # Salvage & OMR flow figure
 ```{r}
-#data from: Walter Griffiths and pulled from tables posted at https://filelib.wildlife.ca.gov/Public/salvage/SMELT_SALVAGE_TABLES/
+#data from: Walter Griffiths
 
-salvage <- read.csv("Total.Salvage_2022.csv", stringsAsFactors = F)
+salvage <- read.csv("LongfinSmelt/Data/Total.Salvage_2023.csv",  stringsAsFactors = F)
 salvage$Date<-mdy(salvage$DATE)
 
 #plot seasonal salvage
@@ -241,57 +215,5 @@ figure <- ggarrange(sal, flow,
                     ncol = 1, nrow = 2)
 figure
 
-ggsave("Plots/2022salvage.png", height=7, width=8, units="in")
-```
-# Historical LFS salvage figure
-```{r}
-hist <- read.csv("LFS Table_Historical_WG.csv", stringsAsFactors = F)
-
-hist$Date<-ymd(hist$Date)
-
-#filter datasets to combine
-hist2 <- hist[(hist$Date < "2020-01-01"),]
-
-#get annual salvage
-hist3 <- hist2 %>% 
-  group_by(Year) %>% 
-  summarize("Total"= sum(Grand.Total,  na.rm = TRUE))
-
-hist3 <- hist3[!is.na(hist3$Year),]
-
-#create table with recent years
-df <- data.frame (Year  = c(2020, 2021, 2022),
-                  Total = c(2686, 865, 7448))
-
-df$Year <- as.integer(df$Year)
-
-#combine
-salv <- rbind(hist3,df)
-
-salv$Year <- as.character(salv$Year)
-
-#plot
-all <- ggplot(data=salv, aes(x=Year, y=Total)) +
-    geom_col(stat="identity",color="black", fill="gray")+
-    theme_bw() +
-    ylab("Total LFS Salvage") +
-    xlab("Calendar Year") +
-    theme(axis.text.x = element_text(angle = 90))
-
-#remove 2002 & prior so you can see numbers for 2003-2022 better
-salv.rm <- salv[-c(1:10), ]
-
-rec <- ggplot(data=salv.rm, aes(x=Year, y=Total)) +
-    geom_col(stat="identity",color="black", fill="gray")+
-    theme_bw() +
-    ylab("Total LFS Salvage") +
-    xlab("Calendar Year") +
-    theme(axis.text.x = element_text(angle = 90))
-
-figure <- ggarrange(rec, all,
-                    labels = c("A", "B"),
-                    ncol = 1, nrow = 2)
-figure
-
-ggsave("Plots/salvage.png", height=7, width=8, units="in")
+ggsave("LongfinSmelt/Plots/2023salvage.png", height=7, width=8, units="in")
 ```
