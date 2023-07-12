@@ -16,7 +16,7 @@ library(readr)
 
 start.date <- "2022-10-01"
 start.date.FPT <- "2022-09-29"
-end.date <- "2023-06-28"
+end.date <- "2023-06-30"
 
 #series of cdec queries to pull data needed to fill out the reports datafile ------------
 clc.C <- cdec_query("CLC", "146", "D", start.date, end.date)%>%
