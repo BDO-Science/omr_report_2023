@@ -5,6 +5,8 @@ library(readr)
 library(deltamapr)
 library(readxl)
 library(ggspatial)
+library(lubridate)
+library(viridis)
 
 
 # TFCF: 37.815176 -121.560709 (WGS84)
@@ -142,6 +144,49 @@ larval <- allsmelt_sf %>% filter(Gear == "20mm") #missing one larva - come back 
           legend.position = "top", legend.title = element_blank(),
           legend.text = element_text(size = 9)))
 
+adult_releases <- bind_rows(adult, releases_sf) %>%
+  mutate(Release = if_else(!is.na(Event), "Release Event", "NA"),
+         Mark2 = if_else(grepl("VIE", Mark) | grepl("None", Mark) | grepl("AdClipped", Mark), Mark, paste0("VIE-", Mark))) %>%
+  mutate(Release_Event = case_when(Mark2 == "AdClipped" ~ "1/18 Trailer", 
+                             Mark2 == "VIE-LOA" ~ "1/25 Hard",
+                             Mark2 == "VIE-RBP" ~ "11/30 Soft",
+                             Mark2 == "VIE-ROP" ~ "1/19 Hard",
+                             Mark2 == "VIE-LRA" ~ "11/30 Hard",
+                             Mark2 == "VIE-RGP" ~ "1/26 Soft",
+                             Mark2 == "None" ~ "Unmarked")) %>%
+  mutate(Release_Event = factor(Release_Event, levels = c("11/30 Hard", "11/30 Soft", "1/18 Trailer", "1/19 Hard", 
+                                                          "1/25 Hard", "1/26 Soft", "Unmarked")))
+adult_only <- adult_releases %>%  filter(Release == "NA")
+releases_only <- adult_releases %>% filter(Release == "Release Event") %>%
+  mutate(ReleaseLabel = paste0(Release_Event, " Release")) %>%
+  mutate(ReleaseLabel = factor(ReleaseLabel, levels = c("11/30 Hard Release", "11/30 Soft Release", "1/18 Trailer Release", "1/19 Hard Release", 
+                                                          "1/25 Hard Release", "1/26 Soft Release")))
+
+(map_detections <- ggplot() + 
+    geom_sf(data = WW_Delta, color = "gray60", fill = "gray90", alpha = 0.5) +
+    # geom_sf(data = R_EDSM_Strata_1718P1, aes(fill = Stratum), alpha = 0.1,inherit.aes = FALSE)+
+    geom_sf(data = releases_only, shape = 9, size =6,  aes(color = ReleaseLabel), inherit.aes = FALSE) + 
+    geom_sf(data = adult_releases, aes(fill = Release_Event) , shape = 21, size = 3, color = "black", inherit.aes = FALSE) + 
+    geom_sf_text(data = adult_releases, mapping = aes(label = Event), size = 4, nudge_x = -0.013, nudge_y = 0.017) +
+    annotation_north_arrow(location = "tl", which_north = "true",
+                           pad_x = unit(.1, "in"), pad_y = unit(0.2, "in"),
+                           style = north_arrow_fancy_orienteering) +
+    annotation_scale(location = "bl", bar_cols = c("black", "white", "black", "white")) +
+    scale_fill_manual(values = c(viridis(6, option = "turbo"), "gray60")) + 
+    viridis::scale_color_viridis(option = "turbo", discrete = TRUE) +
+    # scale_shape_manual(values = c(21, 9)) +
+    scale_size_manual(values = c(3, 6)) +
+    scale_x_continuous(limits = c(-122.2, -121.4)) + 
+    scale_y_continuous(limits = c(37.8, 38.4)) +
+     
+    guides(fill = guide_legend(nrow = 5, byrow = TRUE)) +
+    theme_bw() +
+    theme(axis.title.x = element_blank(),
+          axis.title.y = element_blank(),
+          axis.text = element_text(size = 11),
+          axis.text.x = element_text(angle = 45, vjust = 0.5),
+          legend.position = "top", legend.title = element_blank(),
+          legend.text = element_text(size = 10)))
 # Write maps ------------------------------------
 
 tiff("DeltaSmelt/output/Figure_map_adultDS.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
@@ -150,4 +195,8 @@ dev.off()
 
 tiff("DeltaSmelt/output/Figure_map_ljuvDS.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
 map_detections_l
+dev.off()
+
+tiff("DeltaSmelt/output/Figure_map_releases.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
+map_detections
 dev.off()
