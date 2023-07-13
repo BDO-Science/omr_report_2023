@@ -14,7 +14,7 @@ library(readxl)
 
 # qwest data
 
-qwest0 <- read_excel(here::here("ControllingFactors", "Controlling Factors Table WY 2023_v4.xlsx"), sheet = "DESdata")
+qwest0 <- read_excel(here::here("ControllingFactors", "Controlling Factors Table WY 2023_v4.xlsx"), sheet = "OCOD Data 2023")
 qwest <- qwest0 %>%
   dplyr::select(Date, QWESTcfs) %>%
   mutate(Date = ymd(Date))
