@@ -7,18 +7,25 @@ library(zoo)
 library(purrr)
 library(patchwork)
 library(readr)
+library(readxl)
 
 # This file pulls and plots the environmental data for Smelt OMR Season for the 2023 OMR Seasonal Report.
 # Last edited by C. Pien (cpien@usbr.gov), data pulling code derived from code by N. Bertrand
 
+# qwest data
 
-#sets the dates to be pulled from cdec for the OMR season
+qwest0 <- read_excel(here::here("ControllingFactors", "Controlling Factors Table WY 2023_v4.xlsx"), sheet = "OCOD Data 2023")
+qwest <- qwest0 %>%
+  dplyr::select(Date, QWESTcfs) %>%
+  mutate(Date = ymd(Date))
+
+# sets the dates to be pulled from cdec for the OMR season
 
 start.date <- "2022-10-01"
 start.date.FPT <- "2022-09-29"
-end.date <- "2023-06-28"
+end.date <- "2023-06-30"
 
-#series of cdec queries to pull data needed to fill out the reports datafile ------------
+# Series of cdec queries to pull data needed to fill out the reports datafile ------------
 clc.C <- cdec_query("CLC", "146", "D", start.date, end.date)%>%
   rename(date = datetime) %>%
   mutate(date = as.Date(date))
@@ -123,6 +130,14 @@ theme_plots <- theme(axis.title.x = element_blank(),
                      axis.text = element_text(size = 11),
                      axis.title = element_text(size = 12))
 
+(plot_qwest <- ggplot(qwest) + 
+  geom_hline(yintercept = 0,  linewidth = 1, linetype = "dashed", color = "gray70") +
+  geom_line(aes(Date, QWESTcfs)) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b") + 
+  labs(y = "QWEST (cfs)") +
+  theme_bw() +
+  theme_plots)
+
 (plot_obi <- ggplot(smelt_env_params) + 
    geom_hline(yintercept = 12,  linewidth = 1, linetype = "dashed", color = "gray70") +
   geom_line(aes(date, OBI.fnu.smelt)) +
@@ -176,6 +191,10 @@ theme_plots <- theme(axis.title.x = element_blank(),
 
 
 # Write plots------------------------------------------
+tiff("EnvironmentalConditions/output/Figure_qwest.tiff", width = 8, height = 5, units = "in", res = 300, compression = "lzw")
+plot_qwest
+dev.off()
+
 tiff("EnvironmentalConditions/output/Figure_obi_turbidity.tiff", width = 8, height = 5, units = "in", res = 300, compression = "lzw")
 plot_obi
 dev.off()

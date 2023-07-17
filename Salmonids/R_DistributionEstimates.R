@@ -78,7 +78,7 @@ plot_distest_WR_nat <- ggplot() +
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_YTE_Upper, ymin=Natural_WR_YTE_Lower), 
               alpha=0.2,fill="blue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_ID_Upper, ymin=Natural_WR_ID_Lower), 
-              alpha=0.2,fill="forestgreen")+
+              alpha=0.2,fill="navyblue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_WR_E_Upper, ymin=Natural_WR_E_Lower), 
               alpha=0.2,fill="red") +
   theme_bw() +
@@ -93,7 +93,7 @@ plot_distest_WR_nat <- ggplot() +
                  axis.title.y = element_text(size = 9, angle = 90),
                  strip.text = element_text(size = 7),
                  legend.position = "top") + 
-  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  scale_colour_manual(values = c("red","navyblue","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
   guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
 
 plot_distest_WR_nat
@@ -113,7 +113,7 @@ plot_monitoring_WR_nat <- ggplot() +
         axis.title.y = element_text(size = 9, angle = 90),
         strip.text = element_text(size = 7),
         legend.position = "top") + 
-  scale_colour_manual(values = c("blue","forestgreen","red"),name="",labels=c("100% - cumulative % Knights Landing catch","Cumulative % combined Sacramento trawl and seine catch minus Chipps Trawl catch","Cumulative % Chipps Trawl Catch"))+
+  scale_colour_manual(values = c("blue","navyblue","red"),name="",labels=c("100% - cumulative % Knights Landing catch","Cumulative % combined Sacramento trawl and seine catch minus Chipps Trawl catch","Cumulative % Chipps Trawl Catch"))+
   guides(color = guide_legend(nrow=3,byrow=TRUE))
   
 plot_monitoring_WR_nat
@@ -143,7 +143,7 @@ plot_distest_SR <- ggplot() +
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_YTE_Upper, ymin=Natural_SR_YTE_Lower), 
               alpha=0.2,fill="blue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_ID_Upper, ymin=Natural_SR_ID_Lower), 
-              alpha=0.2,fill="forestgreen")+
+              alpha=0.2,fill="navyblue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SR_E_Upper, ymin=Natural_SR_E_Lower), 
               alpha=0.2,fill="red") +
   theme_bw() +
@@ -157,7 +157,7 @@ plot_distest_SR <- ggplot() +
         axis.title.y = element_text(size = 9, angle = 90),
         strip.text = element_text(size = 7),
         legend.position = "top") + 
-  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  scale_colour_manual(values = c("red","navyblue","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
   guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
 
 plot_distest_SR
@@ -186,7 +186,7 @@ plot_distest_SH <- ggplot() +
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_YTE_Upper, ymin=Natural_SH_YTE_Lower), 
               alpha=0.2,fill="blue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_ID_Upper, ymin=Natural_SH_ID_Lower), 
-              alpha=0.2,fill="forestgreen")+
+              alpha=0.2,fill="navyblue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Natural_SH_E_Upper, ymin=Natural_SR_E_Lower), 
               alpha=0.2,fill="red") +
   theme_bw() +
@@ -200,7 +200,7 @@ plot_distest_SH <- ggplot() +
         axis.title.y = element_text(size = 9, angle = 90),
         strip.text = element_text(size = 7),
         legend.position = "top") + 
-  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  scale_colour_manual(values = c("red","navyblue","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
   guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
 
 plot_distest_SH
@@ -250,7 +250,7 @@ plot_monitoring_WR_hat <- ggplot() +
         axis.title.y = element_text(size = 9, angle = 90),
         strip.text = element_text(size = 7),
         legend.position = "top") + 
-  scale_colour_manual(values = c("blue","forestgreen","red"),name="",labels=c("100% - cumulative % Meridian Bridge detections","Cumulative % Tower Bridge detections minus Benicia East","Cumulative % Benicia East detections"))+
+  scale_colour_manual(values = c("blue","navyblue","red"),name="",labels=c("100% - cumulative % Meridian Bridge detections","Cumulative % Tower Bridge detections minus Benicia East","Cumulative % Benicia East detections"))+
   guides(color = guide_legend(nrow=3,byrow=TRUE))
 
 plot_monitoring_WR_hat
@@ -264,7 +264,7 @@ plot_distest_WR_hat <- ggplot() +
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_YTE_Upper, ymin=Hatch_WR_YTE_Lower), 
               alpha=0.2,fill="blue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_ID_Upper, ymin=Hatch_WR_ID_Lower), 
-              alpha=0.2,fill="forestgreen")+
+              alpha=0.2,fill="navyblue")+
   geom_ribbon(data=distribution_data_edit,aes(x=Date, ymax=Hatch_WR_E_Upper, ymin=Hatch_WR_E_Lower), 
               alpha=0.2,fill="red") +
   theme_bw() +
@@ -279,7 +279,7 @@ plot_distest_WR_hat <- ggplot() +
         axis.title.y = element_text(size = 9, angle = 90),
         strip.text = element_text(size = 7),
         legend.position = "top") + 
-  scale_colour_manual(values = c("red","forestgreen","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
+  scale_colour_manual(values = c("red","navyblue","blue"),name="",labels=c("Exited the Delta","In the Delta","Yet to Enter the Delta"))+
   guides(color = guide_legend(reverse = TRUE,nrow=3,byrow=TRUE))
 
 plot_distest_WR_hat
@@ -316,4 +316,5 @@ polygon(x = c(distribution_data_edit$Date, distribution_data_edit$Date[length(di
 axis(1, at=at, format(at, "%b %d"), cex.axis = .7)
 legend(min(distribution_data$Date), 50, legend=c("Yet to enter Delta", "In Delta", "Exited Delta"),
        col=c("black", "black",'black'), lty=1:3, cex=0.8)
+
 
