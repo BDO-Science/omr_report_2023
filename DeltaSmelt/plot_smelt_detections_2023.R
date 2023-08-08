@@ -27,8 +27,8 @@ sta_salvage <- data.frame(Source = c("CVP Salvage", "SWP Salvage"),
                           Longitude = c(-121.560709, -121.59523))
 sta_broodstock <- data.frame(Source  = "Broodstock",
                              Station = "Broodstock",
-                             Latitude = 38.27666667,
-                             Longitude = -122.0375) 
+                             Latitude = 38.0636,
+                             Longitude = -121.7986) 
 sta_chipps <- read_csv("https://portal.edirepository.org/nis/dataviewer?packageid=edi.244.11&entityid=99a038d691f27cd306ff93fdcbc03b77") %>%
   filter(MethodCode == "MWTR" & Location == "Chipps Island") %>%
   mutate(Source = "Chipps") %>%
@@ -163,40 +163,39 @@ releases_only <- adult_releases %>% filter(Release == "Release Event") %>%
                                                           "1/25 Hard Release", "1/26 Soft Release")))
 
 (map_detections <- ggplot() + 
-    geom_sf(data = WW_Delta, color = "gray60", fill = "gray90", alpha = 0.5) +
+    geom_sf(data = WW_Delta, color = "gray70", fill = "gray90", alpha = 0.5) +
     # geom_sf(data = R_EDSM_Strata_1718P1, aes(fill = Stratum), alpha = 0.1,inherit.aes = FALSE)+
     geom_sf(data = releases_only, shape = 9, size =6,  aes(color = ReleaseLabel), inherit.aes = FALSE) + 
-    geom_sf(data = adult_releases, aes(fill = Release_Event) , shape = 21, size = 3, color = "black", inherit.aes = FALSE) + 
-    geom_sf_text(data = adult_releases, mapping = aes(label = Event), size = 4, nudge_x = -0.013, nudge_y = 0.017) +
+    geom_sf(data = adult_releases, aes(fill = Release_Event), shape = 21, size = 3.5, alpha = 0.75, color = "black", inherit.aes = FALSE) + 
+    geom_sf_text(data = adult_releases, mapping = aes(label = Event), size = 4.5, nudge_x = -0.014, nudge_y = 0.017) +
     annotation_north_arrow(location = "tl", which_north = "true",
                            pad_x = unit(.1, "in"), pad_y = unit(0.2, "in"),
                            style = north_arrow_fancy_orienteering) +
     annotation_scale(location = "bl", bar_cols = c("black", "white", "black", "white")) +
-    scale_fill_manual(values = c(viridis(6, option = "turbo"), "gray60")) + 
+    scale_fill_manual(values = c(viridis(6, option = "turbo"), "gray50")) + 
     viridis::scale_color_viridis(option = "turbo", discrete = TRUE) +
     # scale_shape_manual(values = c(21, 9)) +
     scale_size_manual(values = c(3, 6)) +
     scale_x_continuous(limits = c(-122.2, -121.4)) + 
     scale_y_continuous(limits = c(37.8, 38.4)) +
-     
     guides(fill = guide_legend(nrow = 5, byrow = TRUE)) +
     theme_bw() +
     theme(axis.title.x = element_blank(),
           axis.title.y = element_blank(),
-          axis.text = element_text(size = 11),
+          axis.text = element_text(size = 12),
           axis.text.x = element_text(angle = 45, vjust = 0.5),
           legend.position = "top", legend.title = element_blank(),
-          legend.text = element_text(size = 10)))
+          legend.text = element_text(size = 11)))
 # Write maps ------------------------------------
 
-tiff("DeltaSmelt/output/Figure_map_adultDS.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
+tiff("DeltaSmelt/output/Figure_map_adultDS.tiff", width = 8, height = 8.5, units = "in", res = 300, compression = "lzw")
 map_detections_a
 dev.off()
 
-tiff("DeltaSmelt/output/Figure_map_ljuvDS.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
+tiff("DeltaSmelt/output/Figure_map_ljuvDS.tiff", width = 7.5, height = 8.5, units = "in", res = 300, compression = "lzw")
 map_detections_l
 dev.off()
 
-tiff("DeltaSmelt/output/Figure_map_releases.tiff", width = 9, height = 9, units = "in", res = 300, compression = "lzw")
+tiff("DeltaSmelt/output/Figure_map_releases.tiff", width = 8.5, height = 8.5, units = "in", res = 300, compression = "lzw")
 map_detections
 dev.off()
