@@ -4,18 +4,17 @@ library(DiagrammeR)
 library(htmlwidgets)
 library(ggplot2)
 library(readr)
-
 library(vistime)
-
+library(readxl)
 
 
 # #ControlFactorTime <- read_delim("ControlFactorTime.txt", 
-#                                 "\t", escape_double = FALSE, col_types = cols(start = col_character()), 
+#                                 "/t", escape_double = FALSE, col_types = cols(start = col_character()), 
 #                                 trim_ws = TRUE)
 
-library(readxl)
-ControlFactorTime <- read_excel("WY2022/ControllinginputFileForRandi_20220721.xlsx", 
-                                                    sheet = "Controlling Periods 2022")
+
+ControlFactorTime <- read_excel("C:/Users/nbertrand/Desktop/Bertrand/GitHub/OMRSeasonalReport/omr_report_2023/ControllingFactors/WY2023/ControllinginputFile_20230710.xlsx", 
+                                                    sheet = "Controlling Periods 2023")
 #View(ControlFactorTime)
 
 
@@ -41,10 +40,10 @@ t1
 ##################################
 ############
 #####
-
+#this file was just made in excel based on the information in the Controlling Factors Table WY 2023_v4.xlsx file
 library(readxl)
-BalEx <- read_excel("WY2022/BlanaceVSExcessWY2022.xlsx")
-View(BalEx)
+BalEx <- read_excel("ControllingFactors/WY2023/BalancedVSExcessWY2023.xlsx")
+#View(BalEx)
 
 
 b1 <- vistime(BalEx, optimize_y = T, col.group = "group", col.color = "color",,show_labels = FALSE)

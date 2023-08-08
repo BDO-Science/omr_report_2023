@@ -12,8 +12,8 @@ library("cowplot")
 
 
 library(readxl)
-actions <-  read_csv("WY2022_outlookdata6282022format.csv")
-#View(actions)
+actions <-  read_csv("C:/Users/nbertrand/Desktop/Bertrand/GitHub/OMRSeasonalReport/omr_report_2023/Survey Interruptions/WY2022_outlookdata6282022format.csv")
+View(actions)
 
 actions <- actions %>% select(event,group,start,end,color,category,notes) 
 
