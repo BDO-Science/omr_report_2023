@@ -56,6 +56,9 @@ MSD.f <- cdec_query("MSD", 25, "E", start.date, end.date) %>%
 PPT.f <- cdec_query("PPT", 25, "E", start.date, end.date)%>% 
   mutate(date = date(datetime)) 
 
+SJJ.f <- cdec_query("SJJ", 25, "E", start.date, end.date)%>%
+  mutate(date = date(datetime))
+
 #### Old method  of creating data
 
 # DateSeriesWY2023 <- data.frame(date = seq(as.Date(start.date),as.Date(end.date), by = "1 days"))
@@ -116,8 +119,22 @@ PPT.F.salmon <- PPT.f %>%
   pad() %>%
   arrange(date) 
 
+SJJ.C.smelt <- SJJ.f %>%
+  group_by(date) %>% 
+  mutate(sjj.F = mean(parameter_value,na.rm =TRUE)) %>% 
+  ungroup() %>%
+  select(date, sjj.F) %>% 
+  distinct() %>% 
+  drop_na() %>%
+  pad() %>%
+  arrange(date) %>%
+  mutate(sjj.C = (sjj.F -32) * 5/9,
+         sjj.C.3day = rollapplyr(sjj.C,3,  mean, align = "right", partial =T)) %>%
+  select(date, sjj.C.3day)
+  
+
 # Combine into one df and write ----------------------------------
-smelt_env_params <- reduce(list(OBI.fnu.smelt, FPT.cfs.smelt, FPT.fnu.smelt), dplyr::left_join, by = "date")
+smelt_env_params <- reduce(list(OBI.fnu.smelt, FPT.cfs.smelt, FPT.fnu.smelt, SJJ.C.smelt), dplyr::left_join, by = "date")
 # write_csv(smelt_env_params, "EnvironmentalConditions/output/Data_smelt_environmental.csv")
 
 offramp_env_params <- reduce(list(CLC.F.smelt, MSD.F.salmon, PPT.F.salmon), dplyr::left_join, by = "date") %>%
@@ -137,6 +154,14 @@ theme_plots <- theme(axis.title.x = element_blank(),
   labs(y = "QWEST (cfs)") +
   theme_bw() +
   theme_plots)
+
+(plot_sjj <- ggplot(smelt_env_params) + 
+    geom_hline(yintercept = 12,  linewidth = 1, linetype = "dashed", color = "gray70") +
+    geom_line(aes(date, sjj.C.3day)) +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b") + 
+    labs(y = "SJJ Temperature (°C)") +
+    theme_bw() +
+    theme_plots)
 
 (plot_obi <- ggplot(smelt_env_params) + 
    geom_hline(yintercept = 12,  linewidth = 1, linetype = "dashed", color = "gray70") +
@@ -201,6 +226,10 @@ dev.off()
 
 tiff("EnvironmentalConditions/output/Figure_fpt_flow_turbidity.tiff", width = 8, height = 9, units = "in", res = 300, compression = "lzw")
 plot_fpt
+dev.off()
+
+tiff("EnvironmentalConditions/output/Figure_qwest.tiff", width = 8, height = 5, units = "in", res = 300, compression = "lzw")
+plot_qwest
 dev.off()
 
 tiff("EnvironmentalConditions/output/Figure_offramp_temperatures.tiff", width = 7, height = 9, units = "in", res = 300, compression = "lzw")
