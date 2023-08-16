@@ -45,8 +45,9 @@ sls$SampleDate<-mdy(sls$Date)
 sls$SurveyType <- "SLS"
 
 #combine datasets
-twentymm2 <- twentymm[c(1:4, 7:10)]
+twentymm2 <- twentymm[c(1:4, 6:10)]
 sls2 <- sls[c(1,3:4,6:10)]
+sls2$TowNum <- NA
 
 survey <- rbind(twentymm2,sls2)
 survey$my <- format(as.Date(survey$SampleDate, format="%m/%Y/%d"),"%m/%y")
@@ -127,6 +128,10 @@ surv
 csd.stat<-survey.csd %>% 
   group_by(SampleDate, SurveyType, Station) %>% 
   summarize("Count"= mean(Catch))
+
+#20-mm survey needs to be an average of the 3 tows - since this doesn't include 0 data and we don't have that yet, we will assume tows 1 and 3 were completed and had 0 LFS. Right now there is only on 20-mm survey station included in this plot. Updated data may change this and should include accurate 0 data in case certain tows were missed, etc. For now though I'm just going to make a manual change.
+
+csd.stat$Count[csd.stat$SurveyType == "20-mm"] <- 0.33
 
 csd.stat$SampleDate <- as.character(csd.stat$SampleDate)
 
